@@ -4,15 +4,13 @@ import { ReginHeader } from './components/ReginHeader';
 import { ReginMasonry } from './components/ReginMasonry';
 import { ReginLightbox } from './components/ReginLightbox';
 import { ReginFooter } from './components/ReginFooter';
-import { SingleFileExportModal } from './components/SingleFileExportModal';
-import { MessageCircle, Phone, Code, ArrowUp } from 'lucide-react';
+import { MessageCircle, Phone, ArrowUp } from 'lucide-react';
 
 export default function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedItem, setSelectedItem] = useState<PortfolioItemData | null>(null);
   const [likedIds, setLikedIds] = useState<number[]>([]);
-  const [isExportModalOpen, setIsExportModalOpen] = useState(false);
 
   // Filter items by category and search term
   const filteredItems = useMemo(() => {
@@ -47,7 +45,6 @@ export default function App() {
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
         totalCount={filteredItems.length}
-        onOpenExport={() => setIsExportModalOpen(true)}
       />
 
       {/* Main Content Area (#main-wrp) with responsive 8-column masonry cards */}
@@ -61,7 +58,7 @@ export default function App() {
       </main>
 
       {/* Regin.in Replica Footer */}
-      <ReginFooter onOpenExport={() => setIsExportModalOpen(true)} />
+      <ReginFooter />
 
       {/* Fullscreen Detail Lightbox Modal (.enlarge-wrp with prev/next arrows) */}
       <ReginLightbox
@@ -73,29 +70,14 @@ export default function App() {
         onToggleLike={(id) => handleToggleLike(id)}
       />
 
-      {/* Single-File HTML / CSS Export Modal */}
-      <SingleFileExportModal
-        isOpen={isExportModalOpen}
-        onClose={() => setIsExportModalOpen(false)}
-      />
-
       {/* Floating Action Buttons (Bottom Right) */}
       <div className="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2.5 pointer-events-auto">
         <button
           onClick={scrollToTop}
-          className="w-10 h-10 rounded-full bg-white/90 hover:bg-white text-neutral-700 hover:text-[#fe4101] shadow-lg border border-neutral-200 flex items-center justify-center transition-all hover:scale-105"
+          className="w-10 h-10 rounded-full bg-white/90 hover:bg-white text-neutral-700 hover:text-[#fe4101] shadow-lg border border-neutral-200 flex items-center justify-center transition-all hover:scale-105 cursor-pointer"
           title="Back to Top"
         >
           <ArrowUp className="w-4 h-4" />
-        </button>
-
-        <button
-          onClick={() => setIsExportModalOpen(true)}
-          className="flex items-center gap-1.5 bg-[#1d1c22] hover:bg-neutral-800 text-amber-400 px-3.5 py-2 rounded-full text-xs font-bold shadow-xl border border-neutral-700 transition-all hover:scale-105"
-          title="Download or copy Single-File HTML"
-        >
-          <Code className="w-3.5 h-3.5" />
-          <span className="hidden sm:inline">Single-File Code</span>
         </button>
 
         <a

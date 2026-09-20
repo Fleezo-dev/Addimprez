@@ -1,4 +1,4 @@
-// Portfolio items directly replicated from regin.in for Addimprez
+// Portfolio items directly replicated from regin.in for Quins Craft
 export interface PortfolioItemData {
   id: number;
   title: string;
@@ -31,13 +31,13 @@ export const CATEGORIES = [
 ];
 
 export const COMPANY_INFO = {
-  brandName: 'Addimprez',
+  brandName: 'Quins Craft',
   tagline: 'Packaging, Branding & Graphic Design Studio',
   address: '286, Diwan Bahadur Rd, next to Kalpana Studios, R.S. Puram, Coimbatore, Tamil Nadu 641001',
   mobile: '9566664663',
   displayPhone: '+91 95666 64663',
-  whatsappUrl: 'https://wa.me/919566664663?text=Hi+Addimprez,+interested+to+work+with+you.+Please+send+me+your+general+tariff+and+working+terms.',
-  email: 'contact@addimprez.com',
+  whatsappUrl: 'https://wa.me/919566664663?text=Hi+Quins+Craft,+interested+to+work+with+you.+Please+send+me+your+general+tariff+and+working+terms.',
+  email: 'contact@quinscraft.com',
   establishedYear: '2007',
   yearsInBusiness: '16+',
   completedProjects: '1,500+',

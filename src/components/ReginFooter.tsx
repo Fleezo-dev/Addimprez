@@ -1,12 +1,8 @@
 import React from 'react';
 import { COMPANY_INFO } from '../data/portfolioItems';
-import { Facebook, MessageCircle, Youtube, Code, MapPin, Phone, Mail } from 'lucide-react';
+import { Facebook, MessageCircle, Youtube, MapPin, Phone } from 'lucide-react';
 
-interface ReginFooterProps {
-  onOpenExport: () => void;
-}
-
-export const ReginFooter: React.FC<ReginFooterProps> = ({ onOpenExport }) => {
+export const ReginFooter: React.FC = () => {
   return (
     <footer className="w-full bg-white border-t border-neutral-200 mt-12 py-10 px-4 text-center font-sans">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
@@ -74,17 +70,6 @@ export const ReginFooter: React.FC<ReginFooterProps> = ({ onOpenExport }) => {
             <Phone className="w-3.5 h-3.5" />
             Mobile: {COMPANY_INFO.mobile}
           </a>
-        </div>
-
-        {/* Quick link to view single-file standalone code */}
-        <div className="mt-6 pt-4 border-t border-neutral-100">
-          <button
-            onClick={onOpenExport}
-            className="inline-flex items-center gap-1.5 text-xs text-neutral-500 hover:text-[#fe4101] transition-colors underline underline-offset-4"
-          >
-            <Code className="w-3.5 h-3.5" />
-            <span>Test Single-File HTML / CSS Export</span>
-          </button>
         </div>
       </div>
     </footer>

@@ -60,7 +60,7 @@ export const ReginLightbox: React.FC<ReginLightboxProps> = ({
   const displayLikes = item.likes + (isLiked ? 1 : 0);
 
   const whatsappInquiryUrl = `https://wa.me/91${COMPANY_INFO.mobile}?text=${encodeURIComponent(
-    `Hi Addimprez! I am interested in your design work: "${item.title}". Please share details and pricing.`
+    `Hi ${COMPANY_INFO.brandName}! I am interested in your design work: "${item.title}". Please share details and pricing.`
   )}`;
 
   return (

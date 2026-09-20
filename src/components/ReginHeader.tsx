@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { CATEGORIES, COMPANY_INFO } from '../data/portfolioItems';
-import { Search, ChevronDown, Check, Share2, Facebook, Mail, MessageCircle, Copy, Grid, Phone, MapPin, X, Code } from 'lucide-react';
+import { Search, ChevronDown, Check, Share2, Facebook, Mail, MessageCircle, Copy, Grid, Phone, MapPin, X } from 'lucide-react';
 
 interface ReginHeaderProps {
   searchTerm: string;
@@ -8,7 +8,6 @@ interface ReginHeaderProps {
   selectedCategory: string;
   setSelectedCategory: (cat: string) => void;
   totalCount: number;
-  onOpenExport: () => void;
 }
 
 export const ReginHeader: React.FC<ReginHeaderProps> = ({
@@ -16,8 +15,7 @@ export const ReginHeader: React.FC<ReginHeaderProps> = ({
   setSearchTerm,
   selectedCategory,
   setSelectedCategory,
-  totalCount,
-  onOpenExport
+  totalCount
 }) => {
   const [isFollowOpen, setIsFollowOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -101,11 +99,11 @@ export const ReginHeader: React.FC<ReginHeaderProps> = ({
           >
             {/* Geometric brand mark logo */}
             <div className="w-8 h-8 bg-[#fe4101] rounded flex items-center justify-center font-black text-white text-lg tracking-tighter shadow-sm">
-              A
+              Q
             </div>
             <div className="flex flex-col">
               <span className="text-xl sm:text-2xl font-black tracking-tight text-white uppercase flex items-center">
-                ADDIMPREZ
+                QUINS CRAFT
                 <span className="text-[#fe4101] ml-0.5 text-xs font-bold tracking-normal bg-[#fe4101]/10 px-1 py-0.5 rounded border border-[#fe4101]/30">
                   .IN
                 </span>
@@ -142,16 +140,6 @@ export const ReginHeader: React.FC<ReginHeaderProps> = ({
 
         {/* Right Navigation Controls */}
         <div className="flex items-center gap-2 sm:gap-3">
-          {/* Standalone HTML Export Badge / Button */}
-          <button
-            onClick={onOpenExport}
-            className="hidden xl:flex items-center gap-1.5 bg-neutral-800 hover:bg-neutral-700 text-amber-300 hover:text-amber-200 px-3 py-1.5 rounded-full text-xs font-semibold border border-neutral-700 transition-colors"
-            title="Download or copy the Single-File HTML + CSS requested"
-          >
-            <Code className="w-3.5 h-3.5 text-amber-400" />
-            <span>Single-File Code</span>
-          </button>
-
           {/* Direct WhatsApp Chat Icon */}
           <a
             href={COMPANY_INFO.whatsappUrl}
@@ -441,7 +429,7 @@ export const ReginHeader: React.FC<ReginHeaderProps> = ({
                   <span>Facebook</span>
                 </a>
                 <a
-                  href={`https://api.whatsapp.com/send?text=${encodeURIComponent('Check out Addimprez packaging & branding designs: ' + window.location.href)}`}
+                  href={`https://api.whatsapp.com/send?text=${encodeURIComponent('Check out Quins Craft packaging & branding designs: ' + window.location.href)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2.5 px-3 py-2 rounded hover:bg-emerald-50 text-emerald-600 transition-colors"
@@ -450,7 +438,7 @@ export const ReginHeader: React.FC<ReginHeaderProps> = ({
                   <span>WhatsApp</span>
                 </a>
                 <a
-                  href={`mailto:?subject=Addimprez Packaging Portfolio&body=${encodeURIComponent(window.location.href)}`}
+                  href={`mailto:?subject=Quins Craft Packaging Portfolio&body=${encodeURIComponent(window.location.href)}`}
                   className="flex items-center gap-2.5 px-3 py-2 rounded hover:bg-neutral-100 text-neutral-700 transition-colors"
                 >
                   <Mail className="w-4 h-4" />
