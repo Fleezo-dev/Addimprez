@@ -103,7 +103,7 @@ export const ReginHeader: React.FC<ReginHeaderProps> = ({
             </div>
             <div className="flex flex-col">
               <span className="text-xl sm:text-2xl font-black tracking-tight text-white uppercase flex items-center">
-                QUINS CRAFT
+                QUINS CRAFTO
                 <span className="text-[#fe4101] ml-0.5 text-xs font-bold tracking-normal bg-[#fe4101]/10 px-1 py-0.5 rounded border border-[#fe4101]/30">
                   .IN
                 </span>
@@ -429,7 +429,7 @@ export const ReginHeader: React.FC<ReginHeaderProps> = ({
                   <span>Facebook</span>
                 </a>
                 <a
-                  href={`https://api.whatsapp.com/send?text=${encodeURIComponent('Check out Quins Craft packaging & branding designs: ' + window.location.href)}`}
+                  href={`https://api.whatsapp.com/send?text=${encodeURIComponent('Check out Quins Crafto packaging & branding designs: ' + window.location.href)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2.5 px-3 py-2 rounded hover:bg-emerald-50 text-emerald-600 transition-colors"
@@ -438,7 +438,7 @@ export const ReginHeader: React.FC<ReginHeaderProps> = ({
                   <span>WhatsApp</span>
                 </a>
                 <a
-                  href={`mailto:?subject=Quins Craft Packaging Portfolio&body=${encodeURIComponent(window.location.href)}`}
+                  href={`mailto:?subject=Quins Crafto Packaging Portfolio&body=${encodeURIComponent(window.location.href)}`}
                   className="flex items-center gap-2.5 px-3 py-2 rounded hover:bg-neutral-100 text-neutral-700 transition-colors"
                 >
                   <Mail className="w-4 h-4" />

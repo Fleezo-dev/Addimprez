@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <!-- Background Gradient (Studio lighting) -->
+    <radialGradient id="bgGlow1" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#2a2e39" />
+      <stop offset="60%" stop-color="#181a20" />
+      <stop offset="100%" stop-color="#0f1015" />
+    </radialGradient>
+    <linearGradient id="floorGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14151a" />
+      <stop offset="100%" stop-color="#090a0d" />
+    </linearGradient>
+
+    <!-- Deep Emerald & Matte Black Pouch Gradient -->
+    <linearGradient id="cashewPouch" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0c2317" />
+      <stop offset="20%" stop-color="#143b27" />
+      <stop offset="48%" stop-color="#1e5439" />
+      <stop offset="52%" stop-color="#286b49" />
+      <stop offset="75%" stop-color="#143b27" />
+      <stop offset="100%" stop-color="#08170f" />
+    </linearGradient>
+
+    <linearGradient id="goldLuxury" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe28a" />
+      <stop offset="30%" stop-color="#d4a337" />
+      <stop offset="70%" stop-color="#fff4c2" />
+      <stop offset="100%" stop-color="#a6781b" />
+    </linearGradient>
+
+    <!-- Cashews Texture inside window -->
+    <pattern id="cashewsPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#fdfaf3" />
+      <!-- Cashew shapes -->
+      <path d="M 8 10 C 8 4, 22 4, 24 12 C 25 18, 18 24, 12 20 C 8 17, 8 13, 8 10 Z" fill="#e9d3a7" stroke="#d5bc89" stroke-width="1.2" />
+      <path d="M 24 24 C 24 18, 38 18, 39 26 C 40 32, 32 38, 27 34 C 24 31, 24 27, 24 24 Z" fill="#f0deba" stroke="#d8c090" stroke-width="1.2" />
+      <circle cx="15" cy="30" r="3" fill="#dfc391" />
+      <circle cx="32" cy="10" r="2.5" fill="#dfc391" />
+    </pattern>
+
+    <linearGradient id="metallicSheen1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="44%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="56%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Studio Background -->
+  <rect width="800" height="740" fill="url(#bgGlow1)" />
+  <rect y="740" width="800" height="260" fill="url(#floorGrad1)" />
+  <line x1="0" y1="740" x2="800" y2="740" stroke="#252936" stroke-width="2" opacity="0.6" />
+
+  <!-- Cast Shadows -->
+  <ellipse cx="400" cy="775" rx="210" ry="24" fill="#000000" opacity="0.85" />
+  <ellipse cx="400" cy="770" rx="160" ry="14" fill="#000000" opacity="0.95" />
+
+  <!-- POUCH STRUCTURE -->
+  <g>
+    <!-- Silhouette -->
+    <path d="M 230 180 Q 220 450 205 720 Q 202 755 240 760 Q 400 775 560 760 Q 598 755 595 720 Q 580 450 570 180 Z" fill="url(#cashewPouch)" />
+    <!-- Zipper Seal Header -->
+    <rect x="228" y="145" width="344" height="42" rx="4" fill="#0b2416" stroke="url(#goldLuxury)" stroke-width="1.2" />
+    <line x1="235" y1="158" x2="565" y2="158" stroke="url(#goldLuxury)" stroke-width="1" opacity="0.6" />
+    <line x1="235" y1="168" x2="565" y2="168" stroke="url(#goldLuxury)" stroke-width="1" opacity="0.6" />
+    <circle cx="400" cy="163" r="5" fill="none" stroke="url(#goldLuxury)" stroke-width="1.5" />
+
+    <!-- Sheen overlay -->
+    <path d="M 230 180 Q 220 450 205 720 Q 202 755 240 760 Q 400 775 560 760 Q 598 755 595 720 Q 580 450 570 180 Z" fill="url(#metallicSheen1)" />
+
+    <!-- Crown Icon -->
+    <path d="M 375 228 L 385 240 L 400 220 L 415 240 L 425 228 L 420 250 L 380 250 Z" fill="url(#goldLuxury)" />
+
+    <!-- Brand Name: AURA ROYAL -->
+    <text x="400" y="278" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="34" font-weight="900" letter-spacing="4" fill="#ffffff" text-anchor="middle">
+      AURA ROYAL
+    </text>
+    <text x="400" y="302" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="4" fill="url(#goldLuxury)" text-anchor="middle">
+      EXQUISITE SELECTION
+    </text>
+
+    <!-- Main Title -->
+    <rect x="280" y="318" width="240" height="34" rx="17" fill="url(#goldLuxury)" />
+    <text x="400" y="341" font-family="'Montserrat', Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="2" fill="#0b2416" text-anchor="middle">
+      GOURMET CASHEWS
+    </text>
+    <text x="400" y="375" font-family="sans-serif" font-size="12" font-weight="600" letter-spacing="1.5" fill="#a4dfbf" text-anchor="middle">
+      HAND-PICKED JUMBO W-240 GRADE
+    </text>
+
+    <!-- Gold Arch Cashew Product Window -->
+    <g>
+      <rect x="315" y="405" width="170" height="150" rx="35" fill="url(#goldLuxury)" />
+      <rect x="320" y="410" width="160" height="140" rx="30" fill="#05150c" />
+      <rect x="325" y="415" width="150" height="130" rx="26" fill="url(#cashewsPattern)" />
+      <path d="M 325 435 Q 400 410 475 435 A 30 30 0 0 1 475 460 Q 400 440 325 460 Z" fill="#ffffff" opacity="0.3" />
+    </g>
+
+    <!-- Bottom Badges -->
+    <g transform="translate(250, 595)">
+      <circle cx="40" cy="30" r="22" fill="#0a2517" stroke="url(#goldLuxury)" stroke-width="1.5" />
+      <text x="40" y="27" font-family="sans-serif" font-size="9" font-weight="800" fill="url(#goldLuxury)" text-anchor="middle">W-240</text>
+      <text x="40" y="38" font-family="sans-serif" font-size="7" font-weight="600" fill="#ffffff" text-anchor="middle">GRADE</text>
+
+      <circle cx="150" cy="30" r="24" fill="#fe4101" />
+      <text x="150" y="26" font-family="sans-serif" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">500 G</text>
+      <text x="150" y="38" font-family="sans-serif" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">NET WT.</text>
+
+      <circle cx="260" cy="30" r="22" fill="#0a2517" stroke="url(#goldLuxury)" stroke-width="1.5" />
+      <text x="260" y="27" font-family="sans-serif" font-size="9" font-weight="800" fill="url(#goldLuxury)" text-anchor="middle">SLOW</text>
+      <text x="260" y="38" font-family="sans-serif" font-size="7" font-weight="600" fill="#ffffff" text-anchor="middle">ROASTED</text>
+    </g>
+
+    <!-- Pouch Bottom Bar -->
+    <rect x="235" y="685" width="330" height="34" rx="4" fill="#05150d" stroke="#13472b" stroke-width="1" />
+    <text x="400" y="707" font-family="sans-serif" font-size="11" font-weight="800" letter-spacing="2" fill="url(#goldLuxury)" text-anchor="middle">
+      100% CRUNCHY &amp; FRESH • ZERO CHOLESTEROL
+    </text>
+  </g>
+
+  <!-- Studio Floating Tag Top Left -->
+  <g transform="translate(60, 60)">
+    <rect width="180" height="34" rx="6" fill="#1e222d" stroke="#fe4101" stroke-width="1.5" />
+    <text x="90" y="22" font-family="sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">
+      QUINS CRAFTO PACKAGING
+    </text>
+  </g>
+</svg>

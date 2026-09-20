@@ -1,4 +1,4 @@
-// Portfolio items directly replicated from regin.in for Quins Craft
+// Portfolio items directly replicated from regin.in for Quins Crafto
 export interface PortfolioItemData {
   id: number;
   title: string;
@@ -31,13 +31,13 @@ export const CATEGORIES = [
 ];
 
 export const COMPANY_INFO = {
-  brandName: 'Quins Craft',
+  brandName: 'Quins Crafto',
   tagline: 'Packaging, Branding & Graphic Design Studio',
   address: '286, Diwan Bahadur Rd, next to Kalpana Studios, R.S. Puram, Coimbatore, Tamil Nadu 641001',
   mobile: '9566664663',
   displayPhone: '+91 95666 64663',
-  whatsappUrl: 'https://wa.me/919566664663?text=Hi+Quins+Craft,+interested+to+work+with+you.+Please+send+me+your+general+tariff+and+working+terms.',
-  email: 'contact@quinscraft.com',
+  whatsappUrl: 'https://wa.me/919566664663?text=Hi+Quins+Crafto,+interested+to+work+with+you.+Please+send+me+your+general+tariff+and+working+terms.',
+  email: 'contact@quinscrafto.com',
   establishedYear: '2007',
   yearsInBusiness: '16+',
   completedProjects: '1,500+',
@@ -47,69 +47,69 @@ export const COMPANY_INFO = {
 export const PORTFOLIO_ITEMS: PortfolioItemData[] = [
   {
     "id": 1,
-    "title": "Lion Overseas Cashew Pouch 5/1/2025",
+    "title": "Aura Royal Gourmet Cashews Pouch",
     "category": "packaging-designs",
     "categoryLabel": "Packaging",
-    "image": "https://regin.in/uploads/products/images/primary/lion-overseas-cashew-pouch-512025_1782017120.png",
+    "image": "/assets/products/aura-cashews-pouch.svg",
     "video": null,
     "views": 275,
     "likes": 0,
-    "href": "/packaging-designs/lion-overseas-cashew-pouch-512025"
+    "href": "/packaging-designs/aura-royal-gourmet-cashews-pouch"
   },
   {
     "id": 2,
-    "title": "Netta Care Logo 9/7/2025",
+    "title": "Netta Botanicals Identity & Minimal Logo",
     "category": "logo-designs",
     "categoryLabel": "Logo / Branding",
-    "image": "https://regin.in/uploads/products/images/primary/netta-care-logo-972025_1782016802.png",
+    "image": "/assets/products/netta-care-branding.svg",
     "video": null,
     "views": 206,
     "likes": 1,
-    "href": "/logo-designs/netta-care-logo-972025"
+    "href": "/logo-designs/netta-botanicals-identity-logo"
   },
   {
     "id": 3,
-    "title": "Vaspal Iodized Salt 1/11/2022",
+    "title": "Salvia Pure Natural Crystal Salt Pouch",
     "category": "packaging-designs",
     "categoryLabel": "Packaging",
-    "image": "https://regin.in/uploads/products/images/primary/vaspal-iodized-salt-1112022_1782016186.png",
+    "image": "/assets/products/salvia-crystal-salt.svg",
     "video": null,
     "views": 320,
     "likes": 1,
-    "href": "/packaging-designs/vaspal-iodized-salt-1112022"
+    "href": "/packaging-designs/salvia-pure-natural-crystal-salt-pouch"
   },
   {
     "id": 4,
-    "title": "Vaspal Crystal Salt 11/10/2023",
+    "title": "Oceanic Fine Iodized Sea Salt Packaging",
     "category": "packaging-designs",
     "categoryLabel": "Packaging",
-    "image": "https://regin.in/uploads/products/images/primary/vaspal-crystal-salt_1782015971.png",
+    "image": "/assets/products/oceanic-iodized-salt.svg",
     "video": null,
     "views": 334,
     "likes": 0,
-    "href": "/packaging-designs/vaspal-crystal-salt"
+    "href": "/packaging-designs/oceanic-fine-iodized-sea-salt-packaging"
   },
   {
     "id": 5,
-    "title": "Designers Wanted 5/6/2026",
+    "title": "Creative Studio Hiring Campaign Poster",
     "category": "poster-flyer-designs",
     "categoryLabel": "Poster / Flyer",
-    "image": "https://regin.in/uploads/products/images/primary/designers-wanted-562026_1780653785.png",
+    "image": "/assets/products/designers-wanted-poster.svg",
     "video": "https://regin.in/uploads/products/videos/primary/designers-wanted-562026_1780655366.MP4",
     "views": 388,
     "likes": 1,
-    "href": "/poster-flyer-designs/designers-wanted-562026"
+    "href": "/poster-flyer-designs/creative-studio-hiring-campaign-poster"
   },
   {
     "id": 6,
-    "title": "Ramara Walnut 10/3/2026",
+    "title": "Ramara Premium Organic Walnuts Box",
     "category": "packaging-designs",
     "categoryLabel": "Packaging",
-    "image": "https://regin.in/uploads/products/images/primary/ramara-walnut-1032026_1779463113.png",
+    "image": "/assets/products/ramara-walnuts-box.svg",
     "video": null,
     "views": 407,
     "likes": 0,
-    "href": "/packaging-designs/ramara-walnut-1032026"
+    "href": "/packaging-designs/ramara-premium-organic-walnuts-box"
   },
   {
     "id": 7,

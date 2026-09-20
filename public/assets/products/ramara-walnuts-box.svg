@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <!-- Background Gradient (Rich Dark Walnut Studio) -->
+    <radialGradient id="bgGlow6" cx="50%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#36251b" />
+      <stop offset="60%" stop-color="#1f140d" />
+      <stop offset="100%" stop-color="#0f0905" />
+    </radialGradient>
+    <linearGradient id="floorGrad6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#160e09" />
+      <stop offset="100%" stop-color="#080402" />
+    </linearGradient>
+
+    <!-- Kraft Paper / Artisanal Box Gradient -->
+    <linearGradient id="kraftBoxFront" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b68f5c" />
+      <stop offset="25%" stop-color="#cfab78" />
+      <stop offset="50%" stop-color="#dfbd8d" />
+      <stop offset="75%" stop-color="#c9a471" />
+      <stop offset="100%" stop-color="#a67f4c" />
+    </linearGradient>
+    <linearGradient id="kraftBoxSide" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7a572c" />
+      <stop offset="100%" stop-color="#553a1a" />
+    </linearGradient>
+    <linearGradient id="kraftBoxTop" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ddbe90" />
+      <stop offset="100%" stop-color="#f0d5ab" />
+    </linearGradient>
+
+    <!-- Walnut halves pattern -->
+    <pattern id="walnutPattern" width="45" height="45" patternUnits="userSpaceOnUse">
+      <rect width="45" height="45" fill="#f6ede1" />
+      <ellipse cx="22" cy="22" rx="14" ry="16" fill="#aa763c" stroke="#875824" stroke-width="1.5" />
+      <path d="M 16 12 Q 22 22 16 32" fill="none" stroke="#683f14" stroke-width="2" />
+      <path d="M 28 12 Q 22 22 28 32" fill="none" stroke="#683f14" stroke-width="2" />
+      <line x1="22" y1="8" x2="22" y2="36" stroke="#502d0b" stroke-width="2" />
+    </pattern>
+  </defs>
+
+  <!-- Environment -->
+  <rect width="800" height="740" fill="url(#bgGlow6)" />
+  <rect y="740" width="800" height="260" fill="url(#floorGrad6)" />
+  <line x1="0" y1="740" x2="800" y2="740" stroke="#2b1a10" stroke-width="2" opacity="0.6" />
+
+  <!-- Drop Shadow -->
+  <ellipse cx="380" cy="780" rx="220" ry="24" fill="#000000" opacity="0.85" />
+  <ellipse cx="380" cy="775" rx="170" ry="14" fill="#000000" opacity="0.95" />
+
+  <!-- 3D RIGID PACKAGING BOX FOR WALNUTS -->
+  <g transform="translate(40, -10)">
+    <!-- Top Lid (Isometric Top) -->
+    <polygon points="180,240 460,190 580,240 300,295" fill="url(#kraftBoxTop)" stroke="#b59469" stroke-width="1" />
+
+    <!-- Right Side Panel -->
+    <polygon points="300,295 580,240 580,710 300,765" fill="url(#kraftBoxSide)" />
+
+    <!-- Front Facing Panel -->
+    <polygon points="180,240 300,295 300,765 180,695" fill="url(#kraftBoxFront)" stroke="#8e6738" stroke-width="1" />
+  </g>
+
+  <!-- High-Fidelity Frontal Stand-up Box View for Clear Packaging Labeling -->
+  <g transform="translate(10, 0)">
+    <rect x="230" y="200" width="340" height="540" rx="18" fill="url(#kraftBoxFront)" stroke="#885f2f" stroke-width="2" />
+    
+    <!-- Deep Maroon / Dark Chocolate Accent Band -->
+    <rect x="230" y="270" width="340" height="115" fill="#3a1c0d" />
+    <line x1="230" y1="270" x2="570" y2="270" stroke="#e8c287" stroke-width="2" />
+    <line x1="230" y1="385" x2="570" y2="385" stroke="#e8c287" stroke-width="2" />
+
+    <!-- Brand Name: RAMARA -->
+    <text x="400" y="248" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="34" font-weight="900" letter-spacing="5" fill="#3a1c0d" text-anchor="middle">
+      RAMARA
+    </text>
+    <text x="400" y="264" font-family="sans-serif" font-size="10" font-weight="700" letter-spacing="3" fill="#694024" text-anchor="middle">
+      ESTD. KASHMIR VALLEY
+    </text>
+
+    <!-- Product Title in Maroon Band -->
+    <text x="400" y="322" font-family="'Montserrat', Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="2" fill="#ffffff" text-anchor="middle">
+      ORGANIC WALNUTS
+    </text>
+    <text x="400" y="352" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="3" fill="#f3d19c" text-anchor="middle">
+      KASHMIRI SNOW WHITE KERNELS
+    </text>
+    <text x="400" y="374" font-family="sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="#d9b685" text-anchor="middle">
+      VACUUM PACKED FOR CRISPNESS
+    </text>
+
+    <!-- Product View Window with Real Walnut Halves Illustration -->
+    <rect x="310" y="415" width="180" height="160" rx="28" fill="#e8c287" stroke="#3a1c0d" stroke-width="2" />
+    <rect x="318" y="423" width="164" height="144" rx="22" fill="url(#walnutPattern)" />
+    <!-- Glass Reflection -->
+    <path d="M 318 440 Q 400 415 482 440 A 22 22 0 0 1 482 470 Q 400 450 318 470 Z" fill="#ffffff" opacity="0.35" />
+
+    <!-- Bottom Features & Net Wt -->
+    <g transform="translate(245, 605)">
+      <circle cx="45" cy="30" r="22" fill="#3a1c0d" stroke="#e8c287" stroke-width="1.5" />
+      <text x="45" y="27" font-family="sans-serif" font-size="8" font-weight="800" fill="#e8c287" text-anchor="middle">OMEGA-3</text>
+      <text x="45" y="38" font-family="sans-serif" font-size="7" font-weight="600" fill="#ffffff" text-anchor="middle">RICH</text>
+
+      <circle cx="155" cy="30" r="24" fill="#fe4101" />
+      <text x="155" y="26" font-family="sans-serif" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">250 G</text>
+      <text x="155" y="38" font-family="sans-serif" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">NET WT.</text>
+
+      <circle cx="265" cy="30" r="22" fill="#3a1c0d" stroke="#e8c287" stroke-width="1.5" />
+      <text x="265" y="27" font-family="sans-serif" font-size="8" font-weight="800" fill="#e8c287" text-anchor="middle">EXTRA</text>
+      <text x="265" y="38" font-family="sans-serif" font-size="7" font-weight="600" fill="#ffffff" text-anchor="middle">CRUNCH</text>
+    </g>
+
+    <!-- Bottom seal -->
+    <rect x="245" y="685" width="310" height="28" rx="4" fill="#3a1c0d" />
+    <text x="400" y="704" font-family="sans-serif" font-size="10" font-weight="800" letter-spacing="1.5" fill="#f4d4a2" text-anchor="middle">
+      100% UNPOLISHED • NO PRESERVATIVES
+    </text>
+  </g>
+
+  <!-- Studio Floating Tag Top Left -->
+  <g transform="translate(60, 60)">
+    <rect width="180" height="34" rx="6" fill="#1e222d" stroke="#fe4101" stroke-width="1.5" />
+    <text x="90" y="22" font-family="sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">
+      QUINS CRAFTO PACKAGING
+    </text>
+  </g>
+</svg>
