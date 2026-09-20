@@ -1,15 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
   <defs>
-    <!-- Background Gradient (Studio lighting) -->
-    <radialGradient id="bgGlow1" cx="50%" cy="40%" r="65%">
-      <stop offset="0%" stop-color="#2a2e39" />
-      <stop offset="60%" stop-color="#181a20" />
-      <stop offset="100%" stop-color="#0f1015" />
+    <!-- Pristine White Commercial Studio Lighting -->
+    <radialGradient id="studioWhiteBg1" cx="50%" cy="36%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="65%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#eef2f6" />
     </radialGradient>
-    <linearGradient id="floorGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#14151a" />
-      <stop offset="100%" stop-color="#090a0d" />
+
+    <!-- Clean White Seamless Studio Floor -->
+    <linearGradient id="studioFloor1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
     </linearGradient>
+
+    <filter id="floorShadowBlur1" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20" />
+    </filter>
+
+    <filter id="softContactShadow1" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="16" />
+      <feOffset dx="0" dy="18" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.18" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
 
     <!-- Deep Emerald & Matte Black Pouch Gradient -->
     <linearGradient id="cashewPouch" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -22,7 +40,7 @@
     </linearGradient>
 
     <linearGradient id="goldLuxury" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffe28a" />
+      <stop offset="0%" stop-color="#ffe699" />
       <stop offset="30%" stop-color="#d4a337" />
       <stop offset="70%" stop-color="#fff4c2" />
       <stop offset="100%" stop-color="#a6781b" />
@@ -31,7 +49,6 @@
     <!-- Cashews Texture inside window -->
     <pattern id="cashewsPattern" width="40" height="40" patternUnits="userSpaceOnUse">
       <rect width="40" height="40" fill="#fdfaf3" />
-      <!-- Cashew shapes -->
       <path d="M 8 10 C 8 4, 22 4, 24 12 C 25 18, 18 24, 12 20 C 8 17, 8 13, 8 10 Z" fill="#e9d3a7" stroke="#d5bc89" stroke-width="1.2" />
       <path d="M 24 24 C 24 18, 38 18, 39 26 C 40 32, 32 38, 27 34 C 24 31, 24 27, 24 24 Z" fill="#f0deba" stroke="#d8c090" stroke-width="1.2" />
       <circle cx="15" cy="30" r="3" fill="#dfc391" />
@@ -41,23 +58,23 @@
     <linearGradient id="metallicSheen1" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
       <stop offset="44%" stop-color="#ffffff" stop-opacity="0" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.28" />
       <stop offset="56%" stop-color="#ffffff" stop-opacity="0" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
     </linearGradient>
   </defs>
 
-  <!-- Studio Background -->
-  <rect width="800" height="740" fill="url(#bgGlow1)" />
-  <rect y="740" width="800" height="260" fill="url(#floorGrad1)" />
-  <line x1="0" y1="740" x2="800" y2="740" stroke="#252936" stroke-width="2" opacity="0.6" />
+  <!-- CLEAN WHITE COMMERCIAL STUDIO BACKGROUND -->
+  <rect width="800" height="740" fill="url(#studioWhiteBg1)" />
+  <rect y="740" width="800" height="260" fill="url(#studioFloor1)" />
+  <line x1="0" y1="740" x2="800" y2="740" stroke="#cbd5e1" stroke-width="1.2" opacity="0.6" />
 
-  <!-- Cast Shadows -->
-  <ellipse cx="400" cy="775" rx="210" ry="24" fill="#000000" opacity="0.85" />
-  <ellipse cx="400" cy="770" rx="160" ry="14" fill="#000000" opacity="0.95" />
+  <!-- Soft Studio Contact Shadow -->
+  <ellipse cx="400" cy="770" rx="220" ry="24" fill="#0f172a" opacity="0.15" filter="url(#floorShadowBlur1)" />
+  <ellipse cx="400" cy="764" rx="170" ry="12" fill="#0f172a" opacity="0.22" filter="url(#floorShadowBlur1)" />
 
   <!-- POUCH STRUCTURE -->
-  <g>
+  <g filter="url(#softContactShadow1)">
     <!-- Silhouette -->
     <path d="M 230 180 Q 220 450 205 720 Q 202 755 240 760 Q 400 775 560 760 Q 598 755 595 720 Q 580 450 570 180 Z" fill="url(#cashewPouch)" />
     <!-- Zipper Seal Header -->
@@ -94,7 +111,7 @@
       <rect x="315" y="405" width="170" height="150" rx="35" fill="url(#goldLuxury)" />
       <rect x="320" y="410" width="160" height="140" rx="30" fill="#05150c" />
       <rect x="325" y="415" width="150" height="130" rx="26" fill="url(#cashewsPattern)" />
-      <path d="M 325 435 Q 400 410 475 435 A 30 30 0 0 1 475 460 Q 400 440 325 460 Z" fill="#ffffff" opacity="0.3" />
+      <path d="M 325 435 Q 400 410 475 435 A 30 30 0 0 1 475 460 Q 400 440 325 460 Z" fill="#ffffff" opacity="0.35" />
     </g>
 
     <!-- Bottom Badges -->
@@ -119,11 +136,12 @@
     </text>
   </g>
 
-  <!-- Studio Floating Tag Top Left -->
-  <g transform="translate(60, 60)">
-    <rect width="180" height="34" rx="6" fill="#1e222d" stroke="#fe4101" stroke-width="1.5" />
-    <text x="90" y="22" font-family="sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">
-      QUINS CRAFTO PACKAGING
+  <!-- Studio Floating Badge Top Left -->
+  <g transform="translate(48, 48)">
+    <rect width="210" height="34" rx="17" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+    <circle cx="18" cy="17" r="6" fill="#fe4101" />
+    <text x="114" y="22" font-family="sans-serif" font-size="11" font-weight="800" fill="#0f172a" text-anchor="middle" letter-spacing="1">
+      QUINS CRAFTO STUDIO
     </text>
   </g>
 </svg>

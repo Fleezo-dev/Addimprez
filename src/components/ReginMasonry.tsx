@@ -1,5 +1,6 @@
 import React from 'react';
 import { PortfolioItemData } from '../data/portfolioItems';
+import { resolveAssetUrl } from '../utils/assets';
 import { Eye, Heart, Video } from 'lucide-react';
 
 interface ReginMasonryProps {
@@ -41,14 +42,14 @@ export const ReginMasonry: React.FC<ReginMasonryProps> = ({
               {/* Media container */}
               <div className="relative w-full overflow-hidden bg-neutral-50">
                 <img
-                  src={item.image}
+                  src={resolveAssetUrl(item.image)}
                   alt={item.title}
                   title={item.title}
                   loading="lazy"
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                   onError={(e) => {
-                    // Fallback to high quality mock packaging graphic if external image fails
-                    (e.target as HTMLImageElement).src = `https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80`;
+                    // Prevent broken image loop
+                    (e.target as HTMLImageElement).onerror = null;
                   }}
                 />
 

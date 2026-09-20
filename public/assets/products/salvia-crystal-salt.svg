@@ -1,94 +1,106 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
   <defs>
-    <!-- Background Gradient (Studio lighting) -->
-    <radialGradient id="bgGlow" cx="50%" cy="40%" r="65%">
-      <stop offset="0%" stop-color="#2a2e39" />
-      <stop offset="60%" stop-color="#181a20" />
-      <stop offset="100%" stop-color="#0f1015" />
+    <!-- Pristine White Commercial Studio Lighting -->
+    <radialGradient id="studioWhiteBg" cx="50%" cy="36%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="65%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#eef2f6" />
     </radialGradient>
 
-    <!-- Studio Floor Reflection -->
-    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#14151a" />
-      <stop offset="100%" stop-color="#090a0d" />
+    <!-- Clean White Seamless Studio Floor -->
+    <linearGradient id="studioFloor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
     </linearGradient>
+
+    <!-- Soft Studio Contact Shadow Filter -->
+    <filter id="softContactShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="16" />
+      <feOffset dx="0" dy="18" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.18" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="floorShadowBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22" />
+    </filter>
 
     <!-- Pouch Metallic Cyan-Blue Gradient -->
     <linearGradient id="pouchBody" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#04324f" />
-      <stop offset="15%" stop-color="#0b5885" />
+      <stop offset="15%" stop-color="#0a5987" />
       <stop offset="45%" stop-color="#1976a5" />
       <stop offset="55%" stop-color="#2ba1d8" />
       <stop offset="70%" stop-color="#136794" />
       <stop offset="90%" stop-color="#074166" />
-      <stop offset="100%" stop-color="#022135" />
+      <stop offset="100%" stop-color="#03243a" />
     </linearGradient>
 
-    <!-- Pouch Top Seal & Gusset -->
+    <!-- Pouch Top Seal Bar -->
     <linearGradient id="pouchSeal" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#063a5c" />
       <stop offset="50%" stop-color="#1b82b8" />
       <stop offset="100%" stop-color="#04263e" />
     </linearGradient>
 
-    <!-- Salt Window Gold Foil Rim -->
+    <!-- Gold Foil Gradient -->
     <linearGradient id="goldFoil" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffe28a" />
+      <stop offset="0%" stop-color="#ffe699" />
       <stop offset="30%" stop-color="#d4a337" />
       <stop offset="70%" stop-color="#fff4c2" />
       <stop offset="100%" stop-color="#a6781b" />
     </linearGradient>
 
-    <!-- Salt Crystals Texture Pattern inside window -->
-    <pattern id="saltCrystals" width="20" height="20" patternUnits="userSpaceOnUse">
-      <rect width="20" height="20" fill="#f4f8fb" />
-      <circle cx="4" cy="5" r="1.5" fill="#e0eaf2" />
-      <circle cx="14" cy="7" r="1.2" fill="#ffffff" />
-      <polygon points="8,12 11,10 10,15" fill="#d2e1ee" />
-      <polygon points="16,14 18,17 14,18" fill="#ffffff" />
-      <polygon points="2,16 5,18 3,14" fill="#c4d8e7" />
-      <circle cx="10" cy="3" r="1.6" fill="#e6eff6" />
+    <!-- Salt Crystals Pattern inside window -->
+    <pattern id="saltCrystals" width="22" height="22" patternUnits="userSpaceOnUse">
+      <rect width="22" height="22" fill="#ffffff" />
+      <circle cx="5" cy="6" r="1.8" fill="#e2ebf2" />
+      <circle cx="15" cy="8" r="1.4" fill="#cfdce6" />
+      <polygon points="9,13 13,11 12,17" fill="#d7e3ed" />
+      <polygon points="18,15 20,19 16,20" fill="#e8f0f6" />
+      <polygon points="3,17 7,19 4,15" fill="#c7d7e3" />
+      <circle cx="11" cy="4" r="1.8" fill="#e2edf5" />
     </pattern>
 
-    <!-- Soft Ambient Drop Shadow -->
-    <filter id="pouchShadow" x="-20%" y="-10%" width="140%" height="130%">
-      <feDropShadow dx="0" dy="35" stdDeviation="28" flood-color="#000000" flood-opacity="0.8" />
-    </filter>
-
-    <!-- Metallic Specular Highlight overlay -->
+    <!-- Metallic Specular Sheen Overlay -->
     <linearGradient id="metallicSheen" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
       <stop offset="42%" stop-color="#ffffff" stop-opacity="0" />
-      <stop offset="48%" stop-color="#ffffff" stop-opacity="0.28" />
+      <stop offset="48%" stop-color="#ffffff" stop-opacity="0.32" />
       <stop offset="54%" stop-color="#ffffff" stop-opacity="0" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
     </linearGradient>
   </defs>
 
-  <!-- Background Environment -->
-  <rect width="800" height="740" fill="url(#bgGlow)" />
-  <rect y="740" width="800" height="260" fill="url(#floorGrad)" />
-  <line x1="0" y1="740" x2="800" y2="740" stroke="#252936" stroke-width="2" opacity="0.6" />
+  <!-- CLEAN WHITE COMMERCIAL STUDIO BACKGROUND -->
+  <rect width="800" height="740" fill="url(#studioWhiteBg)" />
+  <rect y="740" width="800" height="260" fill="url(#studioFloor)" />
+  <line x1="0" y1="740" x2="800" y2="740" stroke="#cbd5e1" stroke-width="1.2" opacity="0.6" />
 
-  <!-- Floor Contact Shadow -->
-  <ellipse cx="400" cy="775" rx="210" ry="24" fill="#000000" opacity="0.85" />
-  <ellipse cx="400" cy="770" rx="160" ry="14" fill="#000000" opacity="0.95" />
+  <!-- Soft Studio Floor Shadow -->
+  <ellipse cx="400" cy="770" rx="220" ry="24" fill="#0f172a" opacity="0.14" filter="url(#floorShadowBlur)" />
+  <ellipse cx="400" cy="764" rx="170" ry="12" fill="#0f172a" opacity="0.22" filter="url(#floorShadowBlur)" />
 
-  <!-- Spilled Salt Crystals on Table -->
-  <g opacity="0.9">
-    <ellipse cx="270" cy="770" rx="45" ry="10" fill="#eef5fa" opacity="0.75" />
-    <circle cx="250" cy="768" r="2.5" fill="#ffffff" />
-    <circle cx="280" cy="773" r="2" fill="#ffffff" />
-    <circle cx="295" cy="769" r="1.8" fill="#d9e6f2" />
-    <circle cx="240" cy="772" r="3" fill="#ffffff" />
-    <circle cx="265" cy="774" r="2.2" fill="#e2edf7" />
-    <circle cx="530" cy="772" r="2" fill="#ffffff" />
-    <circle cx="545" cy="775" r="2.5" fill="#e2edf7" />
-    <circle cx="560" cy="771" r="1.8" fill="#ffffff" />
+  <!-- Natural Spilled Salt Crystals on Clean White Surface -->
+  <g opacity="0.95">
+    <ellipse cx="270" cy="768" rx="42" ry="9" fill="#cbd5e1" opacity="0.45" />
+    <circle cx="248" cy="766" r="3" fill="#ffffff" stroke="#94a3b8" stroke-width="0.8" />
+    <circle cx="282" cy="770" r="2.5" fill="#ffffff" stroke="#94a3b8" stroke-width="0.8" />
+    <circle cx="296" cy="767" r="2" fill="#ffffff" stroke="#94a3b8" stroke-width="0.7" />
+    <circle cx="236" cy="769" r="3.2" fill="#ffffff" stroke="#94a3b8" stroke-width="0.8" />
+    <circle cx="266" cy="772" r="2.5" fill="#ffffff" stroke="#94a3b8" stroke-width="0.7" />
+    <circle cx="530" cy="769" r="2.2" fill="#ffffff" stroke="#94a3b8" stroke-width="0.7" />
+    <circle cx="548" cy="772" r="2.8" fill="#ffffff" stroke="#94a3b8" stroke-width="0.8" />
+    <circle cx="562" cy="768" r="2" fill="#ffffff" stroke="#94a3b8" stroke-width="0.7" />
   </g>
 
-  <!-- STAND-UP POUCH PACKAGING -->
-  <g filter="url(#pouchShadow)">
+  <!-- STAND-UP POUCH PACKAGING (Clean high-contrast presentation) -->
+  <g filter="url(#softContactShadow)">
     <!-- Main Pouch Silhouette with Curved Stand-up Gusset Bottom -->
     <path d="M 230 180 
              Q 220 450 205 720 
@@ -100,24 +112,24 @@
           fill="url(#pouchBody)" />
 
     <!-- Pouch Top Seal Bar (Heat Seal with Texture) -->
-    <rect x="228" y="145" width="344" height="42" rx="4" fill="url(#pouchSeal)" />
+    <rect x="228" y="145" width="344" height="42" rx="4" fill="url(#pouchSeal)" stroke="#021d2f" stroke-width="1" />
     <!-- Seal Grip Ridges -->
-    <line x1="235" y1="152" x2="565" y2="152" stroke="#45b6ec" stroke-width="1.2" opacity="0.5" />
-    <line x1="235" y1="157" x2="565" y2="157" stroke="#45b6ec" stroke-width="1.2" opacity="0.5" />
-    <line x1="235" y1="162" x2="565" y2="162" stroke="#45b6ec" stroke-width="1.2" opacity="0.5" />
-    <line x1="235" y1="167" x2="565" y2="167" stroke="#45b6ec" stroke-width="1.2" opacity="0.5" />
-    <line x1="235" y1="172" x2="565" y2="172" stroke="#45b6ec" stroke-width="1.2" opacity="0.5" />
+    <line x1="235" y1="152" x2="565" y2="152" stroke="#38bdf8" stroke-width="1.2" opacity="0.6" />
+    <line x1="235" y1="157" x2="565" y2="157" stroke="#38bdf8" stroke-width="1.2" opacity="0.6" />
+    <line x1="235" y1="162" x2="565" y2="162" stroke="#38bdf8" stroke-width="1.2" opacity="0.6" />
+    <line x1="235" y1="167" x2="565" y2="167" stroke="#38bdf8" stroke-width="1.2" opacity="0.6" />
+    <line x1="235" y1="172" x2="565" y2="172" stroke="#38bdf8" stroke-width="1.2" opacity="0.6" />
 
     <!-- Tear Notch Indicator -->
     <polygon points="228,172 236,176 228,180" fill="#021a2b" />
     <polygon points="572,172 564,176 572,180" fill="#021a2b" />
 
-    <!-- Modern Deep Wave Graphics on Pouch (FMCG Wave Theme) -->
+    <!-- Modern Deep Wave Graphics on Pouch (FMCG Ocean Wave Theme) -->
     <path d="M 220 540 Q 320 500 400 535 T 582 520 L 590 730 Q 560 760 400 770 Q 240 760 210 730 Z" fill="#03253d" opacity="0.85" />
     <path d="M 215 580 Q 310 540 400 575 T 586 560 L 590 730 Q 560 760 400 770 Q 240 760 210 730 Z" fill="#0a466d" opacity="0.9" />
 
     <!-- Gold Accent Swirl Line -->
-    <path d="M 218 572 Q 310 532 400 568 T 585 552" fill="none" stroke="url(#goldFoil)" stroke-width="3" />
+    <path d="M 218 572 Q 310 532 400 568 T 585 552" fill="none" stroke="url(#goldFoil)" stroke-width="3.5" />
 
     <!-- Pouch Metallic Sheen / Cylinder Light Reflection -->
     <path d="M 230 180 Q 220 450 205 720 Q 202 755 240 760 Q 400 775 560 760 Q 598 755 595 720 Q 580 450 570 180 Z" fill="url(#metallicSheen)" />
@@ -130,7 +142,7 @@
       100% PURE &amp; NATURAL
     </text>
 
-    <!-- Main Brand Name: SALVIA (Replacing old Vaspal) -->
+    <!-- Main Brand Name: SALVIA -->
     <text x="400" y="285" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="52" font-weight="900" letter-spacing="4" fill="#ffffff" text-anchor="middle">
       SALVIA
     </text>
@@ -147,7 +159,7 @@
       SOLAR EVAPORATED SEA SALT
     </text>
 
-    <!-- Transparent Product Window (Oval showing salt crystals inside) -->
+    <!-- Transparent Product Window (Oval showing sparkling salt crystals inside) -->
     <g>
       <!-- Outer Gold Foil Frame -->
       <ellipse cx="400" cy="445" rx="85" ry="58" fill="url(#goldFoil)" />
@@ -156,12 +168,12 @@
       <!-- Salt Window Interior -->
       <ellipse cx="400" cy="445" rx="77" ry="50" fill="url(#saltCrystals)" />
       <!-- Window Inner Gloss Highlight -->
-      <path d="M 335 435 Q 400 405 465 435 A 77 50 0 0 1 335 435 Z" fill="#ffffff" opacity="0.35" />
+      <path d="M 335 435 Q 400 405 465 435 A 77 50 0 0 1 335 435 Z" fill="#ffffff" opacity="0.4" />
     </g>
 
     <!-- Quality Badges / Icons -->
     <g transform="translate(250, 615)">
-      <!-- Badge 1: Vacuum Evaporated -->
+      <!-- Badge 1: Iodized -->
       <circle cx="40" cy="30" r="22" fill="#032238" stroke="url(#goldFoil)" stroke-width="1.5" />
       <text x="40" y="27" font-family="sans-serif" font-size="8" font-weight="800" fill="#ffe28a" text-anchor="middle">IODIZED</text>
       <text x="40" y="38" font-family="sans-serif" font-size="7" font-weight="600" fill="#ffffff" text-anchor="middle">GUARANTEE</text>
@@ -171,7 +183,7 @@
       <text x="150" y="26" font-family="sans-serif" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">1 KG</text>
       <text x="150" y="38" font-family="sans-serif" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">NET WT.</text>
 
-      <!-- Badge 3: Pure Natural -->
+      <!-- Badge 3: Organic -->
       <circle cx="260" cy="30" r="22" fill="#032238" stroke="url(#goldFoil)" stroke-width="1.5" />
       <text x="260" y="27" font-family="sans-serif" font-size="8" font-weight="800" fill="#ffe28a" text-anchor="middle">100%</text>
       <text x="260" y="38" font-family="sans-serif" font-size="7" font-weight="600" fill="#ffffff" text-anchor="middle">ORGANIC</text>
@@ -184,11 +196,12 @@
     </text>
   </g>
 
-  <!-- Studio Floating Tag Top Left -->
-  <g transform="translate(60, 60)">
-    <rect width="180" height="34" rx="6" fill="#1e222d" stroke="#fe4101" stroke-width="1.5" />
-    <text x="90" y="22" font-family="sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">
-      QUINS CRAFTO PACKAGING
+  <!-- Studio Floating Badge Top Left -->
+  <g transform="translate(48, 48)">
+    <rect width="210" height="34" rx="17" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+    <circle cx="18" cy="17" r="6" fill="#fe4101" />
+    <text x="114" y="22" font-family="sans-serif" font-size="11" font-weight="800" fill="#0f172a" text-anchor="middle" letter-spacing="1">
+      QUINS CRAFTO STUDIO
     </text>
   </g>
 </svg>

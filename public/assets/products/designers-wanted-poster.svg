@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
   <defs>
-    <!-- Background Gradient (Bold Editorial Agency Poster) -->
+    <!-- Clean White Studio Wall Background -->
+    <radialGradient id="studioWallWhite" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#eef2f6" />
+    </radialGradient>
+
+    <!-- Poster Body Gradient (Deep Studio Charcoal) -->
     <linearGradient id="posterBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#18171d" />
       <stop offset="50%" stop-color="#212028" />
@@ -13,102 +20,107 @@
       <stop offset="100%" stop-color="#ff7b25" />
     </linearGradient>
 
-    <!-- Grid lines -->
+    <filter id="posterDropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="16" />
+      <feOffset dx="0" dy="20" />
+      <feComponentTransfer><feFuncA type="linear" slope="0.22" /></feComponentTransfer>
+      <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+
     <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2c2b36" stroke-width="1" />
     </pattern>
   </defs>
 
-  <!-- Wall Background -->
-  <rect width="800" height="1000" fill="#0c0b0f" />
+  <!-- CLEAN WHITE GALLERY WALL BACKGROUND -->
+  <rect width="800" height="1000" fill="url(#studioWallWhite)" />
 
-  <!-- POSTER SHADOW -->
-  <rect x="110" y="80" width="580" height="840" rx="4" fill="#000000" opacity="0.65" filter="blur(20px)" />
+  <!-- POSTER DISPLAYED ON CLEAN WHITE GALLERY WALL -->
+  <g filter="url(#posterDropShadow)">
+    <rect x="110" y="70" width="580" height="860" rx="6" fill="url(#posterBg)" stroke="#2b2a36" stroke-width="2" />
+    <rect x="110" y="70" width="580" height="860" fill="url(#gridPattern)" opacity="0.5" />
 
-  <!-- POSTER FRAME -->
-  <rect x="110" y="70" width="580" height="860" rx="4" fill="url(#posterBg)" stroke="#32313d" stroke-width="2" />
-  <rect x="110" y="70" width="580" height="860" fill="url(#gridPattern)" opacity="0.5" />
+    <!-- Header Bar -->
+    <g transform="translate(150, 120)">
+      <rect width="90" height="26" rx="4" fill="#fe4101" />
+      <text x="45" y="17" font-family="sans-serif" font-size="10" font-weight="900" fill="#ffffff" letter-spacing="1" text-anchor="middle">
+        WE ARE HIRING
+      </text>
+      <text x="490" y="18" font-family="sans-serif" font-size="12" font-weight="700" fill="#8e8d9c" text-anchor="end">
+        COIMBATORE STUDIO
+      </text>
+    </g>
 
-  <!-- POSTER CONTENT -->
-  <!-- Header Bar -->
-  <g transform="translate(150, 120)">
-    <rect width="90" height="26" rx="4" fill="#fe4101" />
-    <text x="45" y="17" font-family="sans-serif" font-size="10" font-weight="900" fill="#ffffff" letter-spacing="1" text-anchor="middle">
-      WE ARE HIRING
+    <!-- Giant Headline -->
+    <text x="150" y="240" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="64" font-weight="900" letter-spacing="2" fill="#ffffff">
+      DESIGNERS
     </text>
-    <text x="490" y="18" font-family="sans-serif" font-size="12" font-weight="700" fill="#8e8d9c" text-anchor="end">
-      COIMBATORE STUDIO
+    <text x="150" y="320" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="64" font-weight="900" letter-spacing="2" fill="url(#neonOrange)">
+      WANTED.
     </text>
-  </g>
 
-  <!-- Giant Headline -->
-  <text x="150" y="240" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="64" font-weight="900" letter-spacing="2" fill="#ffffff">
-    DESIGNERS
-  </text>
-  <text x="150" y="320" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="64" font-weight="900" letter-spacing="2" fill="url(#neonOrange)">
-    WANTED.
-  </text>
+    <line x1="150" y1="360" x2="650" y2="360" stroke="#3d3c4a" stroke-width="2" />
 
-  <line x1="150" y1="360" x2="650" y2="360" stroke="#3d3c4a" stroke-width="2" />
+    <!-- Roles List -->
+    <g transform="translate(150, 410)">
+      <g transform="translate(0, 0)">
+        <circle cx="12" cy="12" r="6" fill="#fe4101" />
+        <text x="32" y="18" font-family="'Montserrat', sans-serif" font-size="20" font-weight="800" fill="#ffffff">
+          PACKAGING DESIGNERS (FMCG)
+        </text>
+        <text x="32" y="40" font-family="sans-serif" font-size="12" font-weight="500" fill="#9d9cae">
+          3+ years experience with die-lines, pouches, boxes &amp; print production
+        </text>
+      </g>
 
-  <!-- Roles List -->
-  <g transform="translate(150, 410)">
-    <g transform="translate(0, 0)">
-      <circle cx="12" cy="12" r="6" fill="#fe4101" />
-      <text x="32" y="18" font-family="'Montserrat', sans-serif" font-size="20" font-weight="800" fill="#ffffff">
-        PACKAGING DESIGNERS (FMCG)
-      </text>
-      <text x="32" y="40" font-family="sans-serif" font-size="12" font-weight="500" fill="#9d9cae">
-        3+ years experience with die-lines, pouches, boxes &amp; print production
-      </text>
+      <g transform="translate(0, 90)">
+        <circle cx="12" cy="12" r="6" fill="#fe4101" />
+        <text x="32" y="18" font-family="'Montserrat', sans-serif" font-size="20" font-weight="800" fill="#ffffff">
+          3D MOCKUP &amp; CGI ARTISTS
+        </text>
+        <text x="32" y="40" font-family="sans-serif" font-size="12" font-weight="500" fill="#9d9cae">
+          Blender, KeyShot or Cinema4D commercial product rendering
+        </text>
+      </g>
+
+      <g transform="translate(0, 180)">
+        <circle cx="12" cy="12" r="6" fill="#fe4101" />
+        <text x="32" y="18" font-family="'Montserrat', sans-serif" font-size="20" font-weight="800" fill="#ffffff">
+          BRAND IDENTITY &amp; GRAPHIC ARTISTS
+        </text>
+        <text x="32" y="40" font-family="sans-serif" font-size="12" font-weight="500" fill="#9d9cae">
+          Logo design, typography pairing &amp; visual system mastery
+        </text>
+      </g>
     </g>
 
-    <g transform="translate(0, 90)">
-      <circle cx="12" cy="12" r="6" fill="#fe4101" />
-      <text x="32" y="18" font-family="'Montserrat', sans-serif" font-size="20" font-weight="800" fill="#ffffff">
-        3D MOCKUP &amp; CGI ARTISTS
-      </text>
-      <text x="32" y="40" font-family="sans-serif" font-size="12" font-weight="500" fill="#9d9cae">
-        Blender, KeyShot or Cinema4D commercial product rendering
-      </text>
-    </g>
-
-    <g transform="translate(0, 180)">
-      <circle cx="12" cy="12" r="6" fill="#fe4101" />
-      <text x="32" y="18" font-family="'Montserrat', sans-serif" font-size="20" font-weight="800" fill="#ffffff">
-        BRAND IDENTITY &amp; GRAPHIC ARTISTS
-      </text>
-      <text x="32" y="40" font-family="sans-serif" font-size="12" font-weight="500" fill="#9d9cae">
-        Logo design, typography pairing &amp; visual system mastery
-      </text>
+    <!-- Bottom Action Box -->
+    <rect x="150" y="700" width="500" height="170" rx="12" fill="#201f28" stroke="#363544" stroke-width="1.5" />
+    
+    <text x="180" y="745" font-family="'Montserrat', sans-serif" font-size="18" font-weight="800" fill="#ffffff">
+      Send your portfolio &amp; resume to:
+    </text>
+    <text x="180" y="775" font-family="sans-serif" font-size="16" font-weight="700" fill="#fe4101">
+      careers@quinscrafto.com
+    </text>
+    <text x="180" y="805" font-family="sans-serif" font-size="13" font-weight="600" fill="#b0afc0">
+      WhatsApp: +91 95666 64663 • R.S. Puram, Coimbatore
+    </text>
+    
+    <!-- Agency Seal -->
+    <g transform="translate(560, 785)">
+      <circle cx="0" cy="0" r="36" fill="none" stroke="#fe4101" stroke-width="2" stroke-dasharray="3 3" />
+      <text x="0" y="-4" font-family="sans-serif" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle">QUINS</text>
+      <text x="0" y="10" font-family="sans-serif" font-size="9" font-weight="900" fill="#fe4101" text-anchor="middle">CRAFTO</text>
     </g>
   </g>
 
-  <!-- Bottom Action Box -->
-  <rect x="150" y="700" width="500" height="170" rx="12" fill="#201f28" stroke="#363544" stroke-width="1.5" />
-  
-  <text x="180" y="745" font-family="'Montserrat', sans-serif" font-size="18" font-weight="800" fill="#ffffff">
-    Send your portfolio &amp; resume to:
-  </text>
-  <text x="180" y="775" font-family="sans-serif" font-size="16" font-weight="700" fill="#fe4101">
-    careers@quinscrafto.com
-  </text>
-  <text x="180" y="805" font-family="sans-serif" font-size="13" font-weight="600" fill="#b0afc0">
-    WhatsApp: +91 95666 64663 • R.S. Puram, Coimbatore
-  </text>
-  
-  <!-- Stamp / Agency Seal -->
-  <g transform="translate(560, 785)">
-    <circle cx="0" cy="0" r="36" fill="none" stroke="#fe4101" stroke-width="2" stroke-dasharray="3 3" />
-    <text x="0" y="-4" font-family="sans-serif" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle">QUINS</text>
-    <text x="0" y="10" font-family="sans-serif" font-size="9" font-weight="900" fill="#fe4101" text-anchor="middle">CRAFTO</text>
-  </g>
-
-  <!-- Studio Floating Tag Top Left -->
-  <g transform="translate(60, 30)">
-    <rect width="180" height="30" rx="6" fill="#1e222d" stroke="#fe4101" stroke-width="1.5" />
-    <text x="90" y="20" font-family="sans-serif" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">
-      QUINS CRAFTO CAMPAIGN
+  <!-- Studio Floating Badge Top Left -->
+  <g transform="translate(48, 25)">
+    <rect width="210" height="34" rx="17" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+    <circle cx="18" cy="17" r="6" fill="#fe4101" />
+    <text x="114" y="22" font-family="sans-serif" font-size="11" font-weight="800" fill="#0f172a" text-anchor="middle" letter-spacing="1">
+      QUINS CRAFTO POSTER
     </text>
   </g>
 </svg>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { PortfolioItemData, COMPANY_INFO } from '../data/portfolioItems';
+import { resolveAssetUrl } from '../utils/assets';
 import { X, ChevronLeft, ChevronRight, Eye, Heart, MessageCircle, Share2, Download } from 'lucide-react';
 
 interface ReginLightboxProps {
@@ -151,7 +152,7 @@ export const ReginLightbox: React.FC<ReginLightboxProps> = ({
               loop
               muted
               playsInline
-              poster={item.image}
+              poster={resolveAssetUrl(item.image)}
               className="max-h-[75vh] w-auto max-w-full rounded-lg shadow-2xl border border-neutral-800"
             >
               <source src={item.video} type="video/mp4" />
@@ -159,11 +160,11 @@ export const ReginLightbox: React.FC<ReginLightboxProps> = ({
             </video>
           ) : (
             <img
-              src={item.image}
+              src={resolveAssetUrl(item.image)}
               alt={item.title}
-              className="max-h-[78vh] w-auto max-w-full object-contain rounded-lg shadow-2xl border border-neutral-800/80"
+              className="max-h-[78vh] w-auto max-w-full object-contain rounded-lg shadow-2xl border border-neutral-800/80 bg-white"
               onError={(e) => {
-                (e.target as HTMLImageElement).src = `https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1000&auto=format&fit=crop&q=80`;
+                (e.target as HTMLImageElement).onerror = null;
               }}
             />
           )}
