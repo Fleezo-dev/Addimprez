@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Addimprez - Packaging &amp; Branding Design Agency | Coimbatore</title>
+  <meta name="description" content="Addimprez is a premier creative graphic design agency from Coimbatore specializing in packaging, brand identity, logos, brochures, and websites. Contact: 9566664663" />
+  
+  <style>
+    /* Reset & Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f7f7f8;
+      color: #1d1c22;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header Styling matching regin.in */
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    /* Top Bar (#hd-top) */
+    #hd-top {
+      background: #1d1c22;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .hd-top-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+    }
+    .brand-logo .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: #fe4101;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      font-size: 18px;
+      font-weight: 900;
+    }
+    .brand-logo .dot-in {
+      color: #fe4101;
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(254, 65, 1, 0.15);
+      padding: 2px 5px;
+      border-radius: 3px;
+      margin-left: 4px;
+      border: 1px solid rgba(254, 65, 1, 0.3);
+    }
+
+    /* Search Input Pill */
+    .search-wrp {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .search-input {
+      background: #ffffff;
+      color: #1d1c22;
+      border: none;
+      outline: none;
+      padding: 7px 36px 7px 16px;
+      border-radius: 25px;
+      font-size: 13px;
+      width: 240px;
+      transition: width 0.3s ease;
+    }
+    .search-input:focus {
+      width: 300px;
+      box-shadow: 0 0 0 2px #fe4101;
+    }
+    .search-btn {
+      position: absolute;
+      right: 12px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* Right Navigation Controls */
+    .hd-top-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-pill {
+      background: #fe4101;
+      color: #ffffff;
+      border: none;
+      outline: none;
+      padding: 7px 24px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-pill:hover {
+      background: #e03800;
+    }
+    .btn-pill.active {
+      background: #ffffff;
+      color: #fe4101;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .icon-btn {
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 6px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      border-radius: 4px;
+    }
+    .icon-btn:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Sub Header Bar (#hd-bot) */
+    #hd-bot {
+      background: #f2f2f2;
+      border-bottom: 1px solid #ebebeb;
+      padding: 6px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+    }
+    .hd-bot-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .category-btn {
+      background: #1d1c22;
+      color: #ffffff;
+      border: none;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .category-btn:hover {
+      background: #fe4101;
+    }
+    .hd-bot-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: #555;
+    }
+    .nav-count {
+      font-weight: 500;
+    }
+    .nav-count strong {
+      color: #1d1c22;
+    }
+    .share-link {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #333;
+    }
+    .share-link:hover {
+      color: #fe4101;
+    }
+
+    /* Dropdown Menus */
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+      border: 1px solid #ebebeb;
+      padding: 16px;
+      z-index: 1050;
+      display: none;
+      color: #1d1c22;
+    }
+    .dropdown-menu.show {
+      display: block;
+    }
+    .category-dropdown {
+      left: 0;
+      right: auto;
+      width: 240px;
+      max-height: 400px;
+      overflow-y: auto;
+      padding: 8px 0;
+    }
+    .dropdown-item {
+      display: block;
+      padding: 8px 20px;
+      font-size: 13px;
+      color: #333;
+      transition: background 0.15s, color 0.15s;
+    }
+    .dropdown-item:hover {
+      background: #fff3f0;
+      color: #fe4101;
+      font-weight: 600;
+    }
+
+    /* Popup Forms */
+    .subscribe-menu {
+      width: 320px;
+    }
+    .contact-menu {
+      width: 360px;
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+    .form-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .form-desc {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .form-group {
+      margin-bottom: 12px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 12px;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .form-control:focus {
+      border-color: #fe4101;
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 70px;
+    }
+    .btn-submit {
+      width: 100%;
+      background: #fe4101;
+      color: #fff;
+      border: none;
+      padding: 9px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-submit:hover {
+      background: #e03800;
+    }
+    .contact-meta {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid #eee;
+      font-size: 12px;
+    }
+    .contact-meta h5 {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #333;
+      margin-bottom: 6px;
+    }
+    .contact-phone {
+      font-weight: 700;
+      color: #fe4101;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .contact-address {
+      background: #f9f9f9;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #eee;
+      color: #555;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    /* Main Container & Masonry Layout (#main-wrp) */
+    #main-wrp {
+      margin-top: 96px;
+      padding: 12px 10px;
+      min-height: 80vh;
+    }
+    #masonry-wrp {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    @media (min-width: 576px) {
+      #masonry-wrp { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 768px) {
+      #masonry-wrp { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (min-width: 992px) {
+      #masonry-wrp { grid-template-columns: repeat(5, 1fr); }
+    }
+    @media (min-width: 1200px) {
+      #masonry-wrp { grid-template-columns: repeat(6, 1fr); }
+    }
+    @media (min-width: 1500px) {
+      #masonry-wrp { grid-template-columns: repeat(8, 1fr); }
+    }
+
+    /* Portfolio Items (.items) matching regin.in */
+    .items {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid #ebebeb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+    }
+    .items:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+    .items a {
+      display: block;
+      position: relative;
+    }
+    .items img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .items:hover img {
+      transform: scale(1.03);
+    }
+
+    /* Card Hover Bar (.hover) matching regin.in */
+    .items .hover {
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(2px);
+      padding: 8px 10px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.25s ease;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+    .items:hover .hover {
+      visibility: visible;
+      opacity: 1;
+    }
+    .hover .row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 6px;
+    }
+    .hover .title-txt {
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.2;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .hover .stats-col ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hover .stats-col li {
+      font-size: 10px;
+      color: #ddd;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .hover li.thumb-views::before {
+      content: "👁";
+      font-size: 9px;
+    }
+    .hover li.thumb-app::before {
+      content: "❤️";
+      font-size: 9px;
+    }
+
+    /* Lightbox Modal (.enlarge-wrp) */
+    #lightbox-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000000;
+      z-index: 2000;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+    }
+    #lightbox-modal.active {
+      display: flex;
+    }
+    .lightbox-header {
+      background: #1d1c22;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      border-bottom: 1px solid #333;
+    }
+    .lightbox-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .lightbox-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .lightbox-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      position: relative;
+    }
+    .lightbox-body img {
+      max-height: 75vh;
+      max-width: 90vw;
+      border-radius: 6px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    }
+    .lightbox-footer {
+      padding: 12px;
+      text-align: center;
+      color: #888;
+      font-size: 12px;
+      background: #111;
+      border-top: 1px solid #222;
+    }
+    .page-arrows {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background: rgba(29, 28, 34, 0.85);
+      color: #fff;
+      border: 1px solid #444;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 24px;
+      z-index: 2010;
+      transition: all 0.2s;
+    }
+    .page-arrows:hover {
+      background: #fe4101;
+      border-color: #fe4101;
+    }
+    #page-prev-arrow { left: 20px; }
+    #page-next-arrow { right: 20px; }
+
+    /* Footer Styling matching regin.in */
+    #footer {
+      background: #ffffff;
+      border-top: 1px solid #ebebeb;
+      text-align: center;
+      padding: 40px 16px 30px;
+      margin-top: 30px;
+    }
+    .socials {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #f2f2f2;
+      color: #555;
+      font-weight: 700;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .socials a:hover {
+      background: #fe4101;
+      color: #fff;
+    }
+    .footer-copy {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 6px;
+    }
+    .footer-contact {
+      font-size: 12px;
+      color: #555;
+      font-weight: 500;
+    }
+    .footer-contact strong {
+      color: #fe4101;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="wrapper">
+    <!-- Fixed Header matching regin.in -->
+    <header id="header">
+      <!-- Top Bar (#hd-top) -->
+      <div id="hd-top">
+        <div class="hd-top-left">
+          <a href="#" onclick="filterCategory('all', 'All Items'); return false;" class="brand-logo">
+            <div class="logo-icon">A</div>
+            <span>ADDIMPREZ<span class="dot-in">.IN</span></span>
+          </a>
+
+          <div class="search-wrp">
+            <input type="text" id="search_term" class="search-input" placeholder="Search product..." onkeyup="searchProducts(this.value)" />
+            <button class="search-btn" type="button">🔍</button>
+          </div>
+        </div>
+
+        <div class="hd-top-right">
+          <!-- WhatsApp Chat -->
+          <a href="https://wa.me/919566664663?text=Hi+Addimprez,+interested+to+work+with+you." target="_blank" class="icon-btn" title="WhatsApp: 9566664663">
+            💬
+          </a>
+
+          <!-- Follow us dropdown toggle -->
+          <div style="position: relative;">
+            <button id="btn-follow" class="btn-pill" onclick="toggleDropdown('follow-menu')">Follow us</button>
+            <div id="follow-menu" class="dropdown-menu subscribe-menu">
+              <div id="subscribe-form-cnt">
+                <div class="form-title">Get our latest updates</div>
+                <div class="form-desc">Want to be informed about our new packaging &amp; branding designs? Just subscribe to our newsletter!</div>
+                <form onsubmit="submitSubscribe(event)">
+                  <div class="form-group">
+                    <input type="email" required class="form-control" id="sub-email" placeholder="Your email address" />
+                  </div>
+                  <button type="submit" class="btn-submit">Subscribe</button>
+                </form>
+              </div>
+              <div id="subscribe-thankyou" style="display:none; text-align:center; padding: 15px 0;">
+                <div style="font-size: 24px; color: #10b981; margin-bottom: 5px;">✔</div>
+                <div style="font-weight: 700; font-size: 15px;">Thank you..</div>
+                <div style="font-size: 12px; color: #666; margin-top: 4px;">Let's join hands together soon!</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact us dropdown toggle -->
+          <div style="position: relative;">
+            <button id="btn-contact" class="btn-pill" onclick="toggleDropdown('contact-menu')">Contact us</button>
+            <div id="contact-menu" class="dropdown-menu contact-menu">
+              <div id="contact-form-cnt">
+                <div class="form-title">How can we help you?</div>
+                <div class="form-desc">Please provide details regarding your design requirement.</div>
+                <form onsubmit="submitContact(event)">
+                  <div class="form-group">
+                    <input type="text" required class="form-control" placeholder="Name *" />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" required class="form-control" placeholder="Contact no *" />
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email (Optional)" />
+                  </div>
+                  <div class="form-group">
+                    <textarea required class="form-control" placeholder="Message *"></textarea>
+                  </div>
+                  <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+
+                <div class="contact-meta">
+                  <h5>Call / Whatsapp</h5>
+                  <div style="font-weight: 700; color: #1d1c22; margin-bottom: 2px;">Addimprez</div>
+                  <a href="tel:9566664663" class="contact-phone">+91 9566664663</a>
+                  <div class="contact-address">
+                    📍 286, Diwan Bahadur Rd, next to Kalpana Studios, R.S. Puram, Coimbatore, Tamil Nadu 641001
+                  </div>
+                </div>
+              </div>
+              <div id="contact-thankyou" style="display:none; text-align:center; padding: 20px 0;">
+                <div style="font-size: 28px; color: #10b981; margin-bottom: 5px;">✔</div>
+                <div style="font-weight: 700; font-size: 16px;">Thank you..</div>
+                <div style="font-size: 12px; color: #666; margin-top: 4px;">Will contact you soon at +91 9566664663</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub Header Bar (#hd-bot) -->
+      <div id="hd-bot">
+        <div class="hd-bot-left" style="position: relative;">
+          <button class="category-btn" onclick="toggleDropdown('category-menu')">
+            <span id="current-category-label">Choose Category</span>
+            <span style="font-size: 10px;">▼</span>
+          </button>
+
+          <!-- Category dropdown -->
+          <div id="category-menu" class="dropdown-menu category-dropdown">
+        <a class="dropdown-item" href="#" onclick="filterCategory('all', 'All Items'); return false;">All Items</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('packaging-designs', 'Packaging'); return false;">Packaging</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('logo-designs', 'Logo / Branding'); return false;">Logo / Branding</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('identity-designs', 'Identity'); return false;">Identity</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('brochure-catalogue-designs', 'Brochure / Catalogue'); return false;">Brochure / Catalogue</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('poster-flyer-designs', 'Poster / Flyer'); return false;">Poster / Flyer</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('website-designs', 'Website'); return false;">Website</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('invitation-designs', 'Invitation'); return false;">Invitation</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('menu-card-designs', 'Menu Card'); return false;">Menu Card</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('mobile-ui-designs', 'Mobile UI'); return false;">Mobile UI</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('calendar-designs', 'Calendar'); return false;">Calendar</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('photography', 'Photography'); return false;">Photography</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('shop-branding-designs', 'Shop Branding'); return false;">Shop Branding</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('personalised-gifts-designs', 'Personalised Gifts'); return false;">Personalised Gifts</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('television-commercial-designs', 'Videos'); return false;">Videos</a>
+        <a class="dropdown-item" href="#" onclick="filterCategory('jersey-designs', 'Jersey'); return false;">Jersey</a>
+          </div>
+        </div>
+
+        <div class="hd-bot-right">
+          <span class="nav-count">Showing <strong id="items-count">99</strong> items</span>
+          <span>|</span>
+          <div style="position: relative;">
+            <span class="share-link" onclick="toggleDropdown('share-menu')">Share this page 🔗</span>
+            <div id="share-menu" class="dropdown-menu" style="width: 180px; padding: 8px 0;">
+              <a class="dropdown-item" href="https://www.facebook.com/sharer.php?u=" target="_blank">Facebook</a>
+              <a class="dropdown-item" href="https://api.whatsapp.com/send?text=" target="_blank">WhatsApp</a>
+              <a class="dropdown-item" href="#" onclick="copyPageLink(); return false;">Copy Link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Masonry Portfolio Grid (#main-wrp) -->
+    <main id="main-wrp">
+      <div id="masonry-wrp">
+    <div class="items" data-category="packaging-designs" data-id="1" data-title="Lion Overseas Cashew Pouch 5/1/2025" data-img="https://regin.in/uploads/products/images/primary/lion-overseas-cashew-pouch-512025_1782017120.png" data-views="275" data-likes="0">
+      <a href="#1" onclick="openLightbox(1); return false;">
+        <img loading="lazy" alt="Lion Overseas Cashew Pouch 5/1/2025" title="Lion Overseas Cashew Pouch 5/1/2025" src="https://regin.in/uploads/products/images/primary/lion-overseas-cashew-pouch-512025_1782017120.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Lion Overseas Cashew Pouch 5/1/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">275</li>
+                <li class="thumb-app" id="like-cnt-1">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="2" data-title="Netta Care Logo 9/7/2025" data-img="https://regin.in/uploads/products/images/primary/netta-care-logo-972025_1782016802.png" data-views="206" data-likes="1">
+      <a href="#2" onclick="openLightbox(2); return false;">
+        <img loading="lazy" alt="Netta Care Logo 9/7/2025" title="Netta Care Logo 9/7/2025" src="https://regin.in/uploads/products/images/primary/netta-care-logo-972025_1782016802.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Netta Care Logo 9/7/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">206</li>
+                <li class="thumb-app" id="like-cnt-2">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="3" data-title="Vaspal Iodized Salt 1/11/2022" data-img="https://regin.in/uploads/products/images/primary/vaspal-iodized-salt-1112022_1782016186.png" data-views="320" data-likes="1">
+      <a href="#3" onclick="openLightbox(3); return false;">
+        <img loading="lazy" alt="Vaspal Iodized Salt 1/11/2022" title="Vaspal Iodized Salt 1/11/2022" src="https://regin.in/uploads/products/images/primary/vaspal-iodized-salt-1112022_1782016186.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Vaspal Iodized Salt 1/11/2022</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">320</li>
+                <li class="thumb-app" id="like-cnt-3">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="4" data-title="Vaspal Crystal Salt 11/10/2023" data-img="https://regin.in/uploads/products/images/primary/vaspal-crystal-salt_1782015971.png" data-views="334" data-likes="0">
+      <a href="#4" onclick="openLightbox(4); return false;">
+        <img loading="lazy" alt="Vaspal Crystal Salt 11/10/2023" title="Vaspal Crystal Salt 11/10/2023" src="https://regin.in/uploads/products/images/primary/vaspal-crystal-salt_1782015971.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Vaspal Crystal Salt 11/10/2023</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">334</li>
+                <li class="thumb-app" id="like-cnt-4">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="poster-flyer-designs" data-id="5" data-title="Designers Wanted 5/6/2026" data-img="https://regin.in/uploads/products/images/primary/designers-wanted-562026_1780653785.png" data-views="388" data-likes="1">
+      <a href="#5" onclick="openLightbox(5); return false;">
+        <img loading="lazy" alt="Designers Wanted 5/6/2026" title="Designers Wanted 5/6/2026" src="https://regin.in/uploads/products/images/primary/designers-wanted-562026_1780653785.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Designers Wanted 5/6/2026</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">388</li>
+                <li class="thumb-app" id="like-cnt-5">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="6" data-title="Ramara Walnut 10/3/2026" data-img="https://regin.in/uploads/products/images/primary/ramara-walnut-1032026_1779463113.png" data-views="407" data-likes="0">
+      <a href="#6" onclick="openLightbox(6); return false;">
+        <img loading="lazy" alt="Ramara Walnut 10/3/2026" title="Ramara Walnut 10/3/2026" src="https://regin.in/uploads/products/images/primary/ramara-walnut-1032026_1779463113.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Ramara Walnut 10/3/2026</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">407</li>
+                <li class="thumb-app" id="like-cnt-6">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="7" data-title="Jorday Milk Halwa 26/6/2024" data-img="https://regin.in/uploads/products/images/primary/jorday-milk-halwa-2662024_1779462937.png" data-views="444" data-likes="0">
+      <a href="#7" onclick="openLightbox(7); return false;">
+        <img loading="lazy" alt="Jorday Milk Halwa 26/6/2024" title="Jorday Milk Halwa 26/6/2024" src="https://regin.in/uploads/products/images/primary/jorday-milk-halwa-2662024_1779462937.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Jorday Milk Halwa 26/6/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">444</li>
+                <li class="thumb-app" id="like-cnt-7">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="8" data-title="Golden Star Whole Spices 23/10/2024" data-img="https://regin.in/uploads/products/images/primary/golden-star-whole-spices-23102024_1779462491.png" data-views="395" data-likes="1">
+      <a href="#8" onclick="openLightbox(8); return false;">
+        <img loading="lazy" alt="Golden Star Whole Spices 23/10/2024" title="Golden Star Whole Spices 23/10/2024" src="https://regin.in/uploads/products/images/primary/golden-star-whole-spices-23102024_1779462491.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Golden Star Whole Spices 23/10/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">395</li>
+                <li class="thumb-app" id="like-cnt-8">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="9" data-title="Cocobliss Neera 22/12/2023" data-img="https://regin.in/uploads/products/images/primary/cocobliss-neera-22122023_1779462056.png" data-views="383" data-likes="1">
+      <a href="#9" onclick="openLightbox(9); return false;">
+        <img loading="lazy" alt="Cocobliss Neera 22/12/2023" title="Cocobliss Neera 22/12/2023" src="https://regin.in/uploads/products/images/primary/cocobliss-neera-22122023_1779462056.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Cocobliss Neera 22/12/2023</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">383</li>
+                <li class="thumb-app" id="like-cnt-9">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="10" data-title="Alice Supermarket Logo 29/07/2025" data-img="https://regin.in/uploads/products/images/primary/alice-supermarket-logo_1779461100.png" data-views="444" data-likes="0">
+      <a href="#10" onclick="openLightbox(10); return false;">
+        <img loading="lazy" alt="Alice Supermarket Logo 29/07/2025" title="Alice Supermarket Logo 29/07/2025" src="https://regin.in/uploads/products/images/primary/alice-supermarket-logo_1779461100.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Alice Supermarket Logo 29/07/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">444</li>
+                <li class="thumb-app" id="like-cnt-10">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="11" data-title="unar resort 25/02/2025" data-img="https://regin.in/uploads/products/images/primary/unar-resort-25022025_1778482980.png" data-views="379" data-likes="0">
+      <a href="#11" onclick="openLightbox(11); return false;">
+        <img loading="lazy" alt="unar resort 25/02/2025" title="unar resort 25/02/2025" src="https://regin.in/uploads/products/images/primary/unar-resort-25022025_1778482980.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">unar resort 25/02/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">379</li>
+                <li class="thumb-app" id="like-cnt-11">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="12" data-title="Higard Matbot 20/5/2025" data-img="https://regin.in/uploads/products/images/primary/higard-matbot-2052025_1778476733.png" data-views="480" data-likes="0">
+      <a href="#12" onclick="openLightbox(12); return false;">
+        <img loading="lazy" alt="Higard Matbot 20/5/2025" title="Higard Matbot 20/5/2025" src="https://regin.in/uploads/products/images/primary/higard-matbot-2052025_1778476733.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Higard Matbot 20/5/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">480</li>
+                <li class="thumb-app" id="like-cnt-12">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="13" data-title="Green Fresh Cardamom 31/10/2023" data-img="https://regin.in/uploads/products/images/primary/green-fresh-cardamom-31102023_1778415347.png" data-views="600" data-likes="1">
+      <a href="#13" onclick="openLightbox(13); return false;">
+        <img loading="lazy" alt="Green Fresh Cardamom 31/10/2023" title="Green Fresh Cardamom 31/10/2023" src="https://regin.in/uploads/products/images/primary/green-fresh-cardamom-31102023_1778415347.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Green Fresh Cardamom 31/10/2023</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">600</li>
+                <li class="thumb-app" id="like-cnt-13">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="14" data-title="Arunavilas Logo 14/7/2025" data-img="https://regin.in/uploads/products/images/primary/arunavilas-logo-1472025_1778413978.png" data-views="492" data-likes="0">
+      <a href="#14" onclick="openLightbox(14); return false;">
+        <img loading="lazy" alt="Arunavilas Logo 14/7/2025" title="Arunavilas Logo 14/7/2025" src="https://regin.in/uploads/products/images/primary/arunavilas-logo-1472025_1778413978.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Arunavilas Logo 14/7/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">492</li>
+                <li class="thumb-app" id="like-cnt-14">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="15" data-title="Sevvel Logo 2/6/2025" data-img="https://regin.in/uploads/products/images/primary/sevvel-logo-262025_1778413616.png" data-views="262" data-likes="0">
+      <a href="#15" onclick="openLightbox(15); return false;">
+        <img loading="lazy" alt="Sevvel Logo 2/6/2025" title="Sevvel Logo 2/6/2025" src="https://regin.in/uploads/products/images/primary/sevvel-logo-262025_1778413616.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Sevvel Logo 2/6/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">262</li>
+                <li class="thumb-app" id="like-cnt-15">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="16" data-title="OG (Oh Gosh) Logo 16/6/2025" data-img="https://regin.in/uploads/products/images/primary/og-oh-gosh-logo-1662025_1778411367.png" data-views="280" data-likes="0">
+      <a href="#16" onclick="openLightbox(16); return false;">
+        <img loading="lazy" alt="OG (Oh Gosh) Logo 16/6/2025" title="OG (Oh Gosh) Logo 16/6/2025" src="https://regin.in/uploads/products/images/primary/og-oh-gosh-logo-1662025_1778411367.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">OG (Oh Gosh) Logo 16/6/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">280</li>
+                <li class="thumb-app" id="like-cnt-16">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="17" data-title="Jagan Pistachio 21/6/2022" data-img="https://regin.in/uploads/products/images/primary/jagan-pistachio_1778410608.png" data-views="316" data-likes="0">
+      <a href="#17" onclick="openLightbox(17); return false;">
+        <img loading="lazy" alt="Jagan Pistachio 21/6/2022" title="Jagan Pistachio 21/6/2022" src="https://regin.in/uploads/products/images/primary/jagan-pistachio_1778410608.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Jagan Pistachio 21/6/2022</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">316</li>
+                <li class="thumb-app" id="like-cnt-17">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="18" data-title="Vibu Cashew 21/2/2024" data-img="https://regin.in/uploads/products/images/primary/vibu-cashew-2122024_1776498231.png" data-views="409" data-likes="2">
+      <a href="#18" onclick="openLightbox(18); return false;">
+        <img loading="lazy" alt="Vibu Cashew 21/2/2024" title="Vibu Cashew 21/2/2024" src="https://regin.in/uploads/products/images/primary/vibu-cashew-2122024_1776498231.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Vibu Cashew 21/2/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">409</li>
+                <li class="thumb-app" id="like-cnt-18">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="19" data-title="Crunchy Makhana 7/2/2025" data-img="https://regin.in/uploads/products/images/primary/crunchy-makhana-722025_1776497768.png" data-views="908" data-likes="0">
+      <a href="#19" onclick="openLightbox(19); return false;">
+        <img loading="lazy" alt="Crunchy Makhana 7/2/2025" title="Crunchy Makhana 7/2/2025" src="https://regin.in/uploads/products/images/primary/crunchy-makhana-722025_1776497768.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Crunchy Makhana 7/2/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">908</li>
+                <li class="thumb-app" id="like-cnt-19">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="20" data-title="Navin Bakery Bread 8/7/2025" data-img="https://regin.in/uploads/products/images/primary/navin-bakery-bread-872025_1775721276.png" data-views="731" data-likes="0">
+      <a href="#20" onclick="openLightbox(20); return false;">
+        <img loading="lazy" alt="Navin Bakery Bread 8/7/2025" title="Navin Bakery Bread 8/7/2025" src="https://regin.in/uploads/products/images/primary/navin-bakery-bread-872025_1775721276.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Navin Bakery Bread 8/7/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">731</li>
+                <li class="thumb-app" id="like-cnt-20">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="21" data-title="Thamarai Mazafathi Dates box 10/9/2025" data-img="https://regin.in/uploads/products/images/primary/thamarai-mazafathi-dates-box-1092025_1775720863.png" data-views="440" data-likes="2">
+      <a href="#21" onclick="openLightbox(21); return false;">
+        <img loading="lazy" alt="Thamarai Mazafathi Dates box 10/9/2025" title="Thamarai Mazafathi Dates box 10/9/2025" src="https://regin.in/uploads/products/images/primary/thamarai-mazafathi-dates-box-1092025_1775720863.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Thamarai Mazafathi Dates box 10/9/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">440</li>
+                <li class="thumb-app" id="like-cnt-21">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="website-designs" data-id="22" data-title="Uthra Website 15/05/2025" data-img="https://regin.in/uploads/products/images/primary/uthra-website-15052025_1775637918.png" data-views="432" data-likes="0">
+      <a href="#22" onclick="openLightbox(22); return false;">
+        <img loading="lazy" alt="Uthra Website 15/05/2025" title="Uthra Website 15/05/2025" src="https://regin.in/uploads/products/images/primary/uthra-website-15052025_1775637918.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Uthra Website 15/05/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">432</li>
+                <li class="thumb-app" id="like-cnt-22">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="23" data-title="Navin Bakery Baby Rusk 2/6/2025" data-img="https://regin.in/uploads/products/images/primary/navin-bakery-baby-rusk-262025_1775632603.png" data-views="513" data-likes="0">
+      <a href="#23" onclick="openLightbox(23); return false;">
+        <img loading="lazy" alt="Navin Bakery Baby Rusk 2/6/2025" title="Navin Bakery Baby Rusk 2/6/2025" src="https://regin.in/uploads/products/images/primary/navin-bakery-baby-rusk-262025_1775632603.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Navin Bakery Baby Rusk 2/6/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">513</li>
+                <li class="thumb-app" id="like-cnt-23">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="24" data-title="Navin Bakery Fast Foods 8/7/2025" data-img="https://regin.in/uploads/products/images/primary/navin-bakery-fast-foods-872025_1775390083.png" data-views="393" data-likes="0">
+      <a href="#24" onclick="openLightbox(24); return false;">
+        <img loading="lazy" alt="Navin Bakery Fast Foods 8/7/2025" title="Navin Bakery Fast Foods 8/7/2025" src="https://regin.in/uploads/products/images/primary/navin-bakery-fast-foods-872025_1775390083.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Navin Bakery Fast Foods 8/7/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">393</li>
+                <li class="thumb-app" id="like-cnt-24">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="25" data-title="Surya Tea 7/6/2025" data-img="https://regin.in/uploads/products/images/primary/surya-tea-762025_1775389700.png" data-views="624" data-likes="1">
+      <a href="#25" onclick="openLightbox(25); return false;">
+        <img loading="lazy" alt="Surya Tea 7/6/2025" title="Surya Tea 7/6/2025" src="https://regin.in/uploads/products/images/primary/surya-tea-762025_1775389700.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Surya Tea 7/6/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">624</li>
+                <li class="thumb-app" id="like-cnt-25">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="26" data-title="Dheepam Insence Sticks 7/4/2025" data-img="https://regin.in/uploads/products/images/primary/dheepam-insence-sticks-742025_1775299569.png" data-views="576" data-likes="0">
+      <a href="#26" onclick="openLightbox(26); return false;">
+        <img loading="lazy" alt="Dheepam Insence Sticks 7/4/2025" title="Dheepam Insence Sticks 7/4/2025" src="https://regin.in/uploads/products/images/primary/dheepam-insence-sticks-742025_1775299569.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Dheepam Insence Sticks 7/4/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">576</li>
+                <li class="thumb-app" id="like-cnt-26">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="27" data-title="Maudlin Soap 14/10/2024" data-img="https://regin.in/uploads/products/images/primary/maudlin-soap_1775108445.png" data-views="495" data-likes="0">
+      <a href="#27" onclick="openLightbox(27); return false;">
+        <img loading="lazy" alt="Maudlin Soap 14/10/2024" title="Maudlin Soap 14/10/2024" src="https://regin.in/uploads/products/images/primary/maudlin-soap_1775108445.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Maudlin Soap 14/10/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">495</li>
+                <li class="thumb-app" id="like-cnt-27">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="28" data-title="Mass Drink 31/12/2025" data-img="https://regin.in/uploads/products/images/primary/mass-drink-31122025_1775108209.png" data-views="464" data-likes="0">
+      <a href="#28" onclick="openLightbox(28); return false;">
+        <img loading="lazy" alt="Mass Drink 31/12/2025" title="Mass Drink 31/12/2025" src="https://regin.in/uploads/products/images/primary/mass-drink-31122025_1775108209.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Mass Drink 31/12/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">464</li>
+                <li class="thumb-app" id="like-cnt-28">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="29" data-title="Anbin Suvai Batter 9/1/2026" data-img="https://regin.in/uploads/products/images/primary/anbin-suvai-batter_1775107851.png" data-views="554" data-likes="1">
+      <a href="#29" onclick="openLightbox(29); return false;">
+        <img loading="lazy" alt="Anbin Suvai Batter 9/1/2026" title="Anbin Suvai Batter 9/1/2026" src="https://regin.in/uploads/products/images/primary/anbin-suvai-batter_1775107851.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Anbin Suvai Batter 9/1/2026</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">554</li>
+                <li class="thumb-app" id="like-cnt-29">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="30" data-title="A1 Batter 02/04/2025" data-img="https://regin.in/uploads/products/images/primary/a1-batter-0204202_1770438822.png" data-views="763" data-likes="0">
+      <a href="#30" onclick="openLightbox(30); return false;">
+        <img loading="lazy" alt="A1 Batter 02/04/2025" title="A1 Batter 02/04/2025" src="https://regin.in/uploads/products/images/primary/a1-batter-0204202_1770438822.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">A1 Batter 02/04/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">763</li>
+                <li class="thumb-app" id="like-cnt-30">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="31" data-title="Real batter 05/07/2025" data-img="https://regin.in/uploads/products/images/primary/real-batter-05072025_1770438704.png" data-views="630" data-likes="1">
+      <a href="#31" onclick="openLightbox(31); return false;">
+        <img loading="lazy" alt="Real batter 05/07/2025" title="Real batter 05/07/2025" src="https://regin.in/uploads/products/images/primary/real-batter-05072025_1770438704.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Real batter 05/07/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">630</li>
+                <li class="thumb-app" id="like-cnt-31">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="32" data-title="Alya Batter 9/4/2025" data-img="https://regin.in/uploads/products/images/primary/alya-batter-942025_1770438562.png" data-views="629" data-likes="0">
+      <a href="#32" onclick="openLightbox(32); return false;">
+        <img loading="lazy" alt="Alya Batter 9/4/2025" title="Alya Batter 9/4/2025" src="https://regin.in/uploads/products/images/primary/alya-batter-942025_1770438562.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Alya Batter 9/4/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">629</li>
+                <li class="thumb-app" id="like-cnt-32">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="33" data-title="Maduraa Batter 10/12/2024" data-img="https://regin.in/uploads/products/images/primary/maduraa-batter-10122024_1770438419.png" data-views="837" data-likes="2">
+      <a href="#33" onclick="openLightbox(33); return false;">
+        <img loading="lazy" alt="Maduraa Batter 10/12/2024" title="Maduraa Batter 10/12/2024" src="https://regin.in/uploads/products/images/primary/maduraa-batter-10122024_1770438419.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Maduraa Batter 10/12/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">837</li>
+                <li class="thumb-app" id="like-cnt-33">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="34" data-title="Akshyam Batter 12/12/2024" data-img="https://regin.in/uploads/products/images/primary/akshyam-batter-12122024_1770438179.png" data-views="1041" data-likes="2">
+      <a href="#34" onclick="openLightbox(34); return false;">
+        <img loading="lazy" alt="Akshyam Batter 12/12/2024" title="Akshyam Batter 12/12/2024" src="https://regin.in/uploads/products/images/primary/akshyam-batter-12122024_1770438179.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Akshyam Batter 12/12/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1041</li>
+                <li class="thumb-app" id="like-cnt-34">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="poster-flyer-designs" data-id="35" data-title="Cookgraam Poster 28/08/2025" data-img="https://regin.in/uploads/products/images/primary/cookgraam-poster-28082025_1770433411.png" data-views="637" data-likes="2">
+      <a href="#35" onclick="openLightbox(35); return false;">
+        <img loading="lazy" alt="Cookgraam Poster 28/08/2025" title="Cookgraam Poster 28/08/2025" src="https://regin.in/uploads/products/images/primary/cookgraam-poster-28082025_1770433411.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Cookgraam Poster 28/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">637</li>
+                <li class="thumb-app" id="like-cnt-35">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="36" data-title="Cookgraam Batter 25/07/2025" data-img="https://regin.in/uploads/products/images/primary/cookgraam-batter-25072025_1770431501.png" data-views="580" data-likes="1">
+      <a href="#36" onclick="openLightbox(36); return false;">
+        <img loading="lazy" alt="Cookgraam Batter 25/07/2025" title="Cookgraam Batter 25/07/2025" src="https://regin.in/uploads/products/images/primary/cookgraam-batter-25072025_1770431501.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Cookgraam Batter 25/07/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">580</li>
+                <li class="thumb-app" id="like-cnt-36">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="37" data-title="Cookgraam Logo 25/07/2025" data-img="https://regin.in/uploads/products/images/primary/cookgraam-logo-25072025_1770430158.png" data-views="571" data-likes="1">
+      <a href="#37" onclick="openLightbox(37); return false;">
+        <img loading="lazy" alt="Cookgraam Logo 25/07/2025" title="Cookgraam Logo 25/07/2025" src="https://regin.in/uploads/products/images/primary/cookgraam-logo-25072025_1770430158.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Cookgraam Logo 25/07/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">571</li>
+                <li class="thumb-app" id="like-cnt-37">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="38" data-title="Zam Zam, Snack Squad - 13/10/2025" data-img="https://regin.in/uploads/products/images/primary/zam-zam-snack-squad---13102025_1769151414.png" data-views="706" data-likes="2">
+      <a href="#38" onclick="openLightbox(38); return false;">
+        <img loading="lazy" alt="Zam Zam, Snack Squad - 13/10/2025" title="Zam Zam, Snack Squad - 13/10/2025" src="https://regin.in/uploads/products/images/primary/zam-zam-snack-squad---13102025_1769151414.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Zam Zam, Snack Squad - 13/10/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">706</li>
+                <li class="thumb-app" id="like-cnt-38">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="39" data-title="Khaike Cassava Chips 29/10/2025" data-img="https://regin.in/uploads/products/images/primary/khaike-cassava-chips-29102025_1768719165.png" data-views="922" data-likes="0">
+      <a href="#39" onclick="openLightbox(39); return false;">
+        <img loading="lazy" alt="Khaike Cassava Chips 29/10/2025" title="Khaike Cassava Chips 29/10/2025" src="https://regin.in/uploads/products/images/primary/khaike-cassava-chips-29102025_1768719165.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Khaike Cassava Chips 29/10/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">922</li>
+                <li class="thumb-app" id="like-cnt-39">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="40" data-title="Koo Koo Coconut Water Cube 04/09/2025" data-img="https://regin.in/uploads/products/images/primary/koo-koo-coconut-water-cube-04092025_1768300528.png" data-views="1216" data-likes="2">
+      <a href="#40" onclick="openLightbox(40); return false;">
+        <img loading="lazy" alt="Koo Koo Coconut Water Cube 04/09/2025" title="Koo Koo Coconut Water Cube 04/09/2025" src="https://regin.in/uploads/products/images/primary/koo-koo-coconut-water-cube-04092025_1768300528.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Koo Koo Coconut Water Cube 04/09/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1216</li>
+                <li class="thumb-app" id="like-cnt-40">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="41" data-title="Harima Cake Mix 10/12/2024" data-img="https://regin.in/uploads/products/images/primary/harima-cake-mix-10122024_1765275642.png" data-views="846" data-likes="3">
+      <a href="#41" onclick="openLightbox(41); return false;">
+        <img loading="lazy" alt="Harima Cake Mix 10/12/2024" title="Harima Cake Mix 10/12/2024" src="https://regin.in/uploads/products/images/primary/harima-cake-mix-10122024_1765275642.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Harima Cake Mix 10/12/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">846</li>
+                <li class="thumb-app" id="like-cnt-41">3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="42" data-title="Harima Logo improvised 10/12/2024" data-img="https://regin.in/uploads/products/images/primary/harima-logo-improvised-10122024_1765275360.png" data-views="432" data-likes="1">
+      <a href="#42" onclick="openLightbox(42); return false;">
+        <img loading="lazy" alt="Harima Logo improvised 10/12/2024" title="Harima Logo improvised 10/12/2024" src="https://regin.in/uploads/products/images/primary/harima-logo-improvised-10122024_1765275360.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Harima Logo improvised 10/12/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">432</li>
+                <li class="thumb-app" id="like-cnt-42">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="43" data-title="Teek Kumaran 11/12/2024" data-img="https://regin.in/uploads/products/images/primary/teek-kumaran-11122024_1765179695.png" data-views="426" data-likes="1">
+      <a href="#43" onclick="openLightbox(43); return false;">
+        <img loading="lazy" alt="Teek Kumaran 11/12/2024" title="Teek Kumaran 11/12/2024" src="https://regin.in/uploads/products/images/primary/teek-kumaran-11122024_1765179695.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Teek Kumaran 11/12/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">426</li>
+                <li class="thumb-app" id="like-cnt-43">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="44" data-title="Teek Kumaran Logo 11/12/2024" data-img="https://regin.in/uploads/products/images/primary/teek-kumaran-branding_1765179338.png" data-views="446" data-likes="0">
+      <a href="#44" onclick="openLightbox(44); return false;">
+        <img loading="lazy" alt="Teek Kumaran Logo 11/12/2024" title="Teek Kumaran Logo 11/12/2024" src="https://regin.in/uploads/products/images/primary/teek-kumaran-branding_1765179338.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Teek Kumaran Logo 11/12/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">446</li>
+                <li class="thumb-app" id="like-cnt-44">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="poster-flyer-designs" data-id="45" data-title="Karthi Puram Banner 20/11/2025" data-img="https://regin.in/uploads/products/images/primary/karthi-puram-banner-20112025_1764662603.png" data-views="617" data-likes="1">
+      <a href="#45" onclick="openLightbox(45); return false;">
+        <img loading="lazy" alt="Karthi Puram Banner 20/11/2025" title="Karthi Puram Banner 20/11/2025" src="https://regin.in/uploads/products/images/primary/karthi-puram-banner-20112025_1764662603.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Karthi Puram Banner 20/11/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">617</li>
+                <li class="thumb-app" id="like-cnt-45">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="brochure-catalogue-designs" data-id="46" data-title="Karthi Puram Brochure 25/10/2025" data-img="https://regin.in/uploads/products/images/primary/karthi-puram-brochure-25102025_1764662289.png" data-views="579" data-likes="2">
+      <a href="#46" onclick="openLightbox(46); return false;">
+        <img loading="lazy" alt="Karthi Puram Brochure 25/10/2025" title="Karthi Puram Brochure 25/10/2025" src="https://regin.in/uploads/products/images/primary/karthi-puram-brochure-25102025_1764662289.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Karthi Puram Brochure 25/10/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">579</li>
+                <li class="thumb-app" id="like-cnt-46">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="47" data-title="Karthi Puram Logo 04/03/2024" data-img="https://regin.in/uploads/products/images/primary/karthi-puram-logo-04032024_1764662019.png" data-views="420" data-likes="1">
+      <a href="#47" onclick="openLightbox(47); return false;">
+        <img loading="lazy" alt="Karthi Puram Logo 04/03/2024" title="Karthi Puram Logo 04/03/2024" src="https://regin.in/uploads/products/images/primary/karthi-puram-logo-04032024_1764662019.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Karthi Puram Logo 04/03/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">420</li>
+                <li class="thumb-app" id="like-cnt-47">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="48" data-title="Unnamalai Promoters Logo 22/01/2024" data-img="https://regin.in/uploads/products/images/primary/unnamalai-promoters-logo-22012024_1764661580.png" data-views="481" data-likes="2">
+      <a href="#48" onclick="openLightbox(48); return false;">
+        <img loading="lazy" alt="Unnamalai Promoters Logo 22/01/2024" title="Unnamalai Promoters Logo 22/01/2024" src="https://regin.in/uploads/products/images/primary/unnamalai-promoters-logo-22012024_1764661580.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Unnamalai Promoters Logo 22/01/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">481</li>
+                <li class="thumb-app" id="like-cnt-48">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="49" data-title="Super Good Foods Cookies 11/9/2023" data-img="https://regin.in/uploads/products/images/primary/super-good-foods-cookies-1192023_1764426005.png" data-views="560" data-likes="1">
+      <a href="#49" onclick="openLightbox(49); return false;">
+        <img loading="lazy" alt="Super Good Foods Cookies 11/9/2023" title="Super Good Foods Cookies 11/9/2023" src="https://regin.in/uploads/products/images/primary/super-good-foods-cookies-1192023_1764426005.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Super Good Foods Cookies 11/9/2023</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">560</li>
+                <li class="thumb-app" id="like-cnt-49">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="50" data-title="Ashaab Masala 3/9/2019" data-img="https://regin.in/uploads/products/images/primary/ashaab-masala-392019_1764403371.png" data-views="559" data-likes="1">
+      <a href="#50" onclick="openLightbox(50); return false;">
+        <img loading="lazy" alt="Ashaab Masala 3/9/2019" title="Ashaab Masala 3/9/2019" src="https://regin.in/uploads/products/images/primary/ashaab-masala-392019_1764403371.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Ashaab Masala 3/9/2019</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">559</li>
+                <li class="thumb-app" id="like-cnt-50">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="51" data-title="Kalimark bovonto 26/09/2022" data-img="https://regin.in/uploads/products/images/primary/kalimark-bovonto-26092022_1764476858.png" data-views="887" data-likes="0">
+      <a href="#51" onclick="openLightbox(51); return false;">
+        <img loading="lazy" alt="Kalimark bovonto 26/09/2022" title="Kalimark bovonto 26/09/2022" src="https://regin.in/uploads/products/images/primary/kalimark-bovonto-26092022_1764476858.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Kalimark bovonto 26/09/2022</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">887</li>
+                <li class="thumb-app" id="like-cnt-51">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="brochure-catalogue-designs" data-id="52" data-title="ICC ebrochure 18/08/2025" data-img="https://regin.in/uploads/products/images/primary/icc-ebrochure-18082025_1764087394.png" data-views="431" data-likes="1">
+      <a href="#52" onclick="openLightbox(52); return false;">
+        <img loading="lazy" alt="ICC ebrochure 18/08/2025" title="ICC ebrochure 18/08/2025" src="https://regin.in/uploads/products/images/primary/icc-ebrochure-18082025_1764087394.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">ICC ebrochure 18/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">431</li>
+                <li class="thumb-app" id="like-cnt-52">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="brochure-catalogue-designs" data-id="53" data-title="Andrew Estates eBrochure 19/08/2025" data-img="https://regin.in/uploads/products/images/primary/andrew-estates-ebrochure-19082025_1764087282.png" data-views="278" data-likes="0">
+      <a href="#53" onclick="openLightbox(53); return false;">
+        <img loading="lazy" alt="Andrew Estates eBrochure 19/08/2025" title="Andrew Estates eBrochure 19/08/2025" src="https://regin.in/uploads/products/images/primary/andrew-estates-ebrochure-19082025_1764087282.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Andrew Estates eBrochure 19/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">278</li>
+                <li class="thumb-app" id="like-cnt-53">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="brochure-catalogue-designs" data-id="54" data-title="Andrew Enterprises ebrochure 19/08/2025" data-img="https://regin.in/uploads/products/images/primary/andrew-enterprises-ebrochure-19082025_1764087179.png" data-views="367" data-likes="0">
+      <a href="#54" onclick="openLightbox(54); return false;">
+        <img loading="lazy" alt="Andrew Enterprises ebrochure 19/08/2025" title="Andrew Enterprises ebrochure 19/08/2025" src="https://regin.in/uploads/products/images/primary/andrew-enterprises-ebrochure-19082025_1764087179.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Andrew Enterprises ebrochure 19/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">367</li>
+                <li class="thumb-app" id="like-cnt-54">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="brochure-catalogue-designs" data-id="55" data-title="Sri Dairy eBrochure 03/09/2025" data-img="https://regin.in/uploads/products/images/primary/sri-dairy-ebrochure-03092025_1764086897.png" data-views="526" data-likes="0">
+      <a href="#55" onclick="openLightbox(55); return false;">
+        <img loading="lazy" alt="Sri Dairy eBrochure 03/09/2025" title="Sri Dairy eBrochure 03/09/2025" src="https://regin.in/uploads/products/images/primary/sri-dairy-ebrochure-03092025_1764086897.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Sri Dairy eBrochure 03/09/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">526</li>
+                <li class="thumb-app" id="like-cnt-55">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="56" data-title="Two fries Ready to Fry 06/12/2024" data-img="https://regin.in/uploads/products/images/primary/two-fries-ready-to-fry-06122024_1761292190.png" data-views="952" data-likes="2">
+      <a href="#56" onclick="openLightbox(56); return false;">
+        <img loading="lazy" alt="Two fries Ready to Fry 06/12/2024" title="Two fries Ready to Fry 06/12/2024" src="https://regin.in/uploads/products/images/primary/two-fries-ready-to-fry-06122024_1761292190.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Two fries Ready to Fry 06/12/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">952</li>
+                <li class="thumb-app" id="like-cnt-56">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="57" data-title="Honey Rice bag 05/08/2025" data-img="https://regin.in/uploads/products/images/primary/honey-rice-bag-05082025_1760526987.png" data-views="1019" data-likes="1">
+      <a href="#57" onclick="openLightbox(57); return false;">
+        <img loading="lazy" alt="Honey Rice bag 05/08/2025" title="Honey Rice bag 05/08/2025" src="https://regin.in/uploads/products/images/primary/honey-rice-bag-05082025_1760526987.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Honey Rice bag 05/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1019</li>
+                <li class="thumb-app" id="like-cnt-57">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="58" data-title="Honey Rice 05/08/2025" data-img="https://regin.in/uploads/products/images/primary/honey-rice-05082025_1760526861.png" data-views="810" data-likes="2">
+      <a href="#58" onclick="openLightbox(58); return false;">
+        <img loading="lazy" alt="Honey Rice 05/08/2025" title="Honey Rice 05/08/2025" src="https://regin.in/uploads/products/images/primary/honey-rice-05082025_1760526861.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Honey Rice 05/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">810</li>
+                <li class="thumb-app" id="like-cnt-58">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="59" data-title="Kamaladevi Singam Mark Rice 24/4/2025" data-img="https://regin.in/uploads/products/images/primary/kamaladevi-singam-mark-rice-2442025_1760526725.png" data-views="1823" data-likes="2">
+      <a href="#59" onclick="openLightbox(59); return false;">
+        <img loading="lazy" alt="Kamaladevi Singam Mark Rice 24/4/2025" title="Kamaladevi Singam Mark Rice 24/4/2025" src="https://regin.in/uploads/products/images/primary/kamaladevi-singam-mark-rice-2442025_1760526725.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Kamaladevi Singam Mark Rice 24/4/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1823</li>
+                <li class="thumb-app" id="like-cnt-59">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="60" data-title="Kamaladevi Vamsee Rice 16/4/2025" data-img="https://regin.in/uploads/products/images/primary/kamaladevi-vamsee-rice-1642025_1760526515.png" data-views="1278" data-likes="2">
+      <a href="#60" onclick="openLightbox(60); return false;">
+        <img loading="lazy" alt="Kamaladevi Vamsee Rice 16/4/2025" title="Kamaladevi Vamsee Rice 16/4/2025" src="https://regin.in/uploads/products/images/primary/kamaladevi-vamsee-rice-1642025_1760526515.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Kamaladevi Vamsee Rice 16/4/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1278</li>
+                <li class="thumb-app" id="like-cnt-60">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="61" data-title="Kamaladevi Logo 10/3/2025" data-img="https://regin.in/uploads/products/images/primary/kamaladevi-logo-1032025_1760526236.png" data-views="948" data-likes="2">
+      <a href="#61" onclick="openLightbox(61); return false;">
+        <img loading="lazy" alt="Kamaladevi Logo 10/3/2025" title="Kamaladevi Logo 10/3/2025" src="https://regin.in/uploads/products/images/primary/kamaladevi-logo-1032025_1760526236.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Kamaladevi Logo 10/3/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">948</li>
+                <li class="thumb-app" id="like-cnt-61">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="brochure-catalogue-designs" data-id="62" data-title="Navin Bakery Catalogue19/9/2025" data-img="https://regin.in/uploads/products/images/primary/navin-bakery-catalogue1992025_1760516473.png" data-views="745" data-likes="0">
+      <a href="#62" onclick="openLightbox(62); return false;">
+        <img loading="lazy" alt="Navin Bakery Catalogue19/9/2025" title="Navin Bakery Catalogue19/9/2025" src="https://regin.in/uploads/products/images/primary/navin-bakery-catalogue1992025_1760516473.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Navin Bakery Catalogue19/9/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">745</li>
+                <li class="thumb-app" id="like-cnt-62">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="63" data-title="Navin bakery Sweet Box 17/8/2025" data-img="https://regin.in/uploads/products/images/primary/navin-bakery-sweet-box-1782025_1760515724.png" data-views="1061" data-likes="0">
+      <a href="#63" onclick="openLightbox(63); return false;">
+        <img loading="lazy" alt="Navin bakery Sweet Box 17/8/2025" title="Navin bakery Sweet Box 17/8/2025" src="https://regin.in/uploads/products/images/primary/navin-bakery-sweet-box-1782025_1760515724.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Navin bakery Sweet Box 17/8/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1061</li>
+                <li class="thumb-app" id="like-cnt-63">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="64" data-title="Navin Bakey Sweets 24/7/2025" data-img="https://regin.in/uploads/products/images/primary/navin-bakey-sweets-2472025_1760513899.png" data-views="739" data-likes="0">
+      <a href="#64" onclick="openLightbox(64); return false;">
+        <img loading="lazy" alt="Navin Bakey Sweets 24/7/2025" title="Navin Bakey Sweets 24/7/2025" src="https://regin.in/uploads/products/images/primary/navin-bakey-sweets-2472025_1760513899.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Navin Bakey Sweets 24/7/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">739</li>
+                <li class="thumb-app" id="like-cnt-64">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="65" data-title="Navin bakery Festival Sweet Box 12/3/2025" data-img="https://regin.in/uploads/products/images/primary/navin-bakery-festival-sweet-box-1232025_1760513705.png" data-views="560" data-likes="0">
+      <a href="#65" onclick="openLightbox(65); return false;">
+        <img loading="lazy" alt="Navin bakery Festival Sweet Box 12/3/2025" title="Navin bakery Festival Sweet Box 12/3/2025" src="https://regin.in/uploads/products/images/primary/navin-bakery-festival-sweet-box-1232025_1760513705.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Navin bakery Festival Sweet Box 12/3/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">560</li>
+                <li class="thumb-app" id="like-cnt-65">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="66" data-title="Navin Bakery Laddu Box 19/9/2025" data-img="https://regin.in/uploads/products/images/primary/navin-bakery-laddu-box-1992025_1760513225.png" data-views="819" data-likes="1">
+      <a href="#66" onclick="openLightbox(66); return false;">
+        <img loading="lazy" alt="Navin Bakery Laddu Box 19/9/2025" title="Navin Bakery Laddu Box 19/9/2025" src="https://regin.in/uploads/products/images/primary/navin-bakery-laddu-box-1992025_1760513225.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Navin Bakery Laddu Box 19/9/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">819</li>
+                <li class="thumb-app" id="like-cnt-66">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="67" data-title="Nagas Gold Rice bag 23/1/2025" data-img="https://regin.in/uploads/products/images/primary/nagas-gold-rice-bag-2312025_1760512913.png" data-views="983" data-likes="2">
+      <a href="#67" onclick="openLightbox(67); return false;">
+        <img loading="lazy" alt="Nagas Gold Rice bag 23/1/2025" title="Nagas Gold Rice bag 23/1/2025" src="https://regin.in/uploads/products/images/primary/nagas-gold-rice-bag-2312025_1760512913.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Nagas Gold Rice bag 23/1/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">983</li>
+                <li class="thumb-app" id="like-cnt-67">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="68" data-title="Sai Rice 15/4/2024" data-img="https://regin.in/uploads/products/images/primary/sai-rice-1542024_1760512613.png" data-views="931" data-likes="4">
+      <a href="#68" onclick="openLightbox(68); return false;">
+        <img loading="lazy" alt="Sai Rice 15/4/2024" title="Sai Rice 15/4/2024" src="https://regin.in/uploads/products/images/primary/sai-rice-1542024_1760512613.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Sai Rice 15/4/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">931</li>
+                <li class="thumb-app" id="like-cnt-68">4</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="69" data-title="Ramara Flavoured Nuts 1/7/2025" data-img="https://regin.in/uploads/products/images/primary/ramara-flavoured-nuts-172025_1759822281.png" data-views="1180" data-likes="4">
+      <a href="#69" onclick="openLightbox(69); return false;">
+        <img loading="lazy" alt="Ramara Flavoured Nuts 1/7/2025" title="Ramara Flavoured Nuts 1/7/2025" src="https://regin.in/uploads/products/images/primary/ramara-flavoured-nuts-172025_1759822281.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Ramara Flavoured Nuts 1/7/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1180</li>
+                <li class="thumb-app" id="like-cnt-69">4</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="poster-flyer-designs" data-id="70" data-title="Nasafi Banner 15/4/2025" data-img="https://regin.in/uploads/products/images/primary/nasafi-banner-1542025_1759822191.png" data-views="903" data-likes="0">
+      <a href="#70" onclick="openLightbox(70); return false;">
+        <img loading="lazy" alt="Nasafi Banner 15/4/2025" title="Nasafi Banner 15/4/2025" src="https://regin.in/uploads/products/images/primary/nasafi-banner-1542025_1759822191.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Nasafi Banner 15/4/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">903</li>
+                <li class="thumb-app" id="like-cnt-70">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="71" data-title="Nasafi Special Mixure 27/9/2023" data-img="https://regin.in/uploads/products/images/primary/nasafi-special-mixure-2792023_1759821393.png" data-views="808" data-likes="0">
+      <a href="#71" onclick="openLightbox(71); return false;">
+        <img loading="lazy" alt="Nasafi Special Mixure 27/9/2023" title="Nasafi Special Mixure 27/9/2023" src="https://regin.in/uploads/products/images/primary/nasafi-special-mixure-2792023_1759821393.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Nasafi Special Mixure 27/9/2023</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">808</li>
+                <li class="thumb-app" id="like-cnt-71">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="72" data-title="Nasafi Butter Murukku 27/9/2023" data-img="https://regin.in/uploads/products/images/primary/nasafi-butter-murukku-2792023_1759821268.png" data-views="925" data-likes="0">
+      <a href="#72" onclick="openLightbox(72); return false;">
+        <img loading="lazy" alt="Nasafi Butter Murukku 27/9/2023" title="Nasafi Butter Murukku 27/9/2023" src="https://regin.in/uploads/products/images/primary/nasafi-butter-murukku-2792023_1759821268.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Nasafi Butter Murukku 27/9/2023</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">925</li>
+                <li class="thumb-app" id="like-cnt-72">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="73" data-title="Nasafi Chips 25/7/2023" data-img="https://regin.in/uploads/products/images/primary/nasafi-chips-2572023_1759821071.png" data-views="1284" data-likes="1">
+      <a href="#73" onclick="openLightbox(73); return false;">
+        <img loading="lazy" alt="Nasafi Chips 25/7/2023" title="Nasafi Chips 25/7/2023" src="https://regin.in/uploads/products/images/primary/nasafi-chips-2572023_1759821071.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Nasafi Chips 25/7/2023</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1284</li>
+                <li class="thumb-app" id="like-cnt-73">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="74" data-title="Sri Dairy Festival Combo Box 22/8/2025" data-img="https://regin.in/uploads/products/images/primary/sri-dairy-festival-combo-box-2282025_1759820919.png" data-views="1102" data-likes="2">
+      <a href="#74" onclick="openLightbox(74); return false;">
+        <img loading="lazy" alt="Sri Dairy Festival Combo Box 22/8/2025" title="Sri Dairy Festival Combo Box 22/8/2025" src="https://regin.in/uploads/products/images/primary/sri-dairy-festival-combo-box-2282025_1759820919.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Sri Dairy Festival Combo Box 22/8/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1102</li>
+                <li class="thumb-app" id="like-cnt-74">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="75" data-title="Sri Dairy Snacks 26/4/2025" data-img="https://regin.in/uploads/products/images/primary/sri-dairy-snacks-2642025_1759820699.png" data-views="1150" data-likes="3">
+      <a href="#75" onclick="openLightbox(75); return false;">
+        <img loading="lazy" alt="Sri Dairy Snacks 26/4/2025" title="Sri Dairy Snacks 26/4/2025" src="https://regin.in/uploads/products/images/primary/sri-dairy-snacks-2642025_1759820699.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Sri Dairy Snacks 26/4/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1150</li>
+                <li class="thumb-app" id="like-cnt-75">3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="76" data-title="Richmond London Perfume Attitude 25/08/2025" data-img="https://regin.in/uploads/products/images/primary/richmond-london-perfume-attitude-25082025_1759820105.png" data-views="925" data-likes="0">
+      <a href="#76" onclick="openLightbox(76); return false;">
+        <img loading="lazy" alt="Richmond London Perfume Attitude 25/08/2025" title="Richmond London Perfume Attitude 25/08/2025" src="https://regin.in/uploads/products/images/primary/richmond-london-perfume-attitude-25082025_1759820105.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Richmond London Perfume Attitude 25/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">925</li>
+                <li class="thumb-app" id="like-cnt-76">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="77" data-title="Richmond London Perfume Clamen Brown 25/08/2025" data-img="https://regin.in/uploads/products/images/primary/richmond-london-perfume-clamen-brown-25082025_1759820016.png" data-views="631" data-likes="1">
+      <a href="#77" onclick="openLightbox(77); return false;">
+        <img loading="lazy" alt="Richmond London Perfume Clamen Brown 25/08/2025" title="Richmond London Perfume Clamen Brown 25/08/2025" src="https://regin.in/uploads/products/images/primary/richmond-london-perfume-clamen-brown-25082025_1759820016.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Richmond London Perfume Clamen Brown 25/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">631</li>
+                <li class="thumb-app" id="like-cnt-77">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="78" data-title="Richmond London Perfume Clamen white 25/08/2025" data-img="https://regin.in/uploads/products/images/primary/richmond-london-perfume-clamen-white-25082025_1759819886.png" data-views="619" data-likes="2">
+      <a href="#78" onclick="openLightbox(78); return false;">
+        <img loading="lazy" alt="Richmond London Perfume Clamen white 25/08/2025" title="Richmond London Perfume Clamen white 25/08/2025" src="https://regin.in/uploads/products/images/primary/richmond-london-perfume-clamen-white-25082025_1759819886.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Richmond London Perfume Clamen white 25/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">619</li>
+                <li class="thumb-app" id="like-cnt-78">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="79" data-title="Richmond London Perfume She 25/08/2025" data-img="https://regin.in/uploads/products/images/primary/richmond-london-perfume-she-25082025_1759819789.png" data-views="665" data-likes="2">
+      <a href="#79" onclick="openLightbox(79); return false;">
+        <img loading="lazy" alt="Richmond London Perfume She 25/08/2025" title="Richmond London Perfume She 25/08/2025" src="https://regin.in/uploads/products/images/primary/richmond-london-perfume-she-25082025_1759819789.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Richmond London Perfume She 25/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">665</li>
+                <li class="thumb-app" id="like-cnt-79">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="80" data-title="Richmond London Perfume Wild 25/08/2025" data-img="https://regin.in/uploads/products/images/primary/richmond-london-perfume-wild-25082025_1759819690.png" data-views="807" data-likes="2">
+      <a href="#80" onclick="openLightbox(80); return false;">
+        <img loading="lazy" alt="Richmond London Perfume Wild 25/08/2025" title="Richmond London Perfume Wild 25/08/2025" src="https://regin.in/uploads/products/images/primary/richmond-london-perfume-wild-25082025_1759819690.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Richmond London Perfume Wild 25/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">807</li>
+                <li class="thumb-app" id="like-cnt-80">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="81" data-title="Richmond London Perfume Sports 25/08/2025" data-img="https://regin.in/uploads/products/images/primary/richmond-london-perfume-sports-25082025_1759819593.png" data-views="837" data-likes="0">
+      <a href="#81" onclick="openLightbox(81); return false;">
+        <img loading="lazy" alt="Richmond London Perfume Sports 25/08/2025" title="Richmond London Perfume Sports 25/08/2025" src="https://regin.in/uploads/products/images/primary/richmond-london-perfume-sports-25082025_1759819593.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Richmond London Perfume Sports 25/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">837</li>
+                <li class="thumb-app" id="like-cnt-81">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="82" data-title="Richmond London Perfume Seven 25/08/2025" data-img="https://regin.in/uploads/products/images/primary/richmond-london-perfume-seven-25082025_1759819451.png" data-views="889" data-likes="1">
+      <a href="#82" onclick="openLightbox(82); return false;">
+        <img loading="lazy" alt="Richmond London Perfume Seven 25/08/2025" title="Richmond London Perfume Seven 25/08/2025" src="https://regin.in/uploads/products/images/primary/richmond-london-perfume-seven-25082025_1759819451.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Richmond London Perfume Seven 25/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">889</li>
+                <li class="thumb-app" id="like-cnt-82">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="83" data-title="Richmond London Perfume Original 25/08/2025" data-img="https://regin.in/uploads/products/images/primary/richmond-london-perfume-original-25082025_1759819291.png" data-views="674" data-likes="0">
+      <a href="#83" onclick="openLightbox(83); return false;">
+        <img loading="lazy" alt="Richmond London Perfume Original 25/08/2025" title="Richmond London Perfume Original 25/08/2025" src="https://regin.in/uploads/products/images/primary/richmond-london-perfume-original-25082025_1759819291.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Richmond London Perfume Original 25/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">674</li>
+                <li class="thumb-app" id="like-cnt-83">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="84" data-title="Richmond London Perfume 25/08/2025" data-img="https://regin.in/uploads/products/images/primary/richmond-london-perfume-25082025_1759819002.png" data-views="957" data-likes="1">
+      <a href="#84" onclick="openLightbox(84); return false;">
+        <img loading="lazy" alt="Richmond London Perfume 25/08/2025" title="Richmond London Perfume 25/08/2025" src="https://regin.in/uploads/products/images/primary/richmond-london-perfume-25082025_1759819002.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Richmond London Perfume 25/08/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">957</li>
+                <li class="thumb-app" id="like-cnt-84">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="85" data-title="Kozhi Kodens Taro Chips 3/6/2025" data-img="https://regin.in/uploads/products/images/primary/kozhi-kodens-taro-chips-362025_1759804887.png" data-views="1009" data-likes="1">
+      <a href="#85" onclick="openLightbox(85); return false;">
+        <img loading="lazy" alt="Kozhi Kodens Taro Chips 3/6/2025" title="Kozhi Kodens Taro Chips 3/6/2025" src="https://regin.in/uploads/products/images/primary/kozhi-kodens-taro-chips-362025_1759804887.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Kozhi Kodens Taro Chips 3/6/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1009</li>
+                <li class="thumb-app" id="like-cnt-85">1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="86" data-title="Kozhi Kodens Jack fruit Chips 8/7/2025" data-img="https://regin.in/uploads/products/images/primary/kozhikodens-jack-fruit-chips-872025_1759804592.png" data-views="981" data-likes="0">
+      <a href="#86" onclick="openLightbox(86); return false;">
+        <img loading="lazy" alt="Kozhi Kodens Jack fruit Chips 8/7/2025" title="Kozhi Kodens Jack fruit Chips 8/7/2025" src="https://regin.in/uploads/products/images/primary/kozhikodens-jack-fruit-chips-872025_1759804592.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Kozhi Kodens Jack fruit Chips 8/7/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">981</li>
+                <li class="thumb-app" id="like-cnt-86">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="87" data-title="Kozhi Kodens Banana Chips 15/2/2025" data-img="https://regin.in/uploads/products/images/primary/kozhi-kodens-banana-chips-1522025_1759553090.png" data-views="1434" data-likes="0">
+      <a href="#87" onclick="openLightbox(87); return false;">
+        <img loading="lazy" alt="Kozhi Kodens Banana Chips 15/2/2025" title="Kozhi Kodens Banana Chips 15/2/2025" src="https://regin.in/uploads/products/images/primary/kozhi-kodens-banana-chips-1522025_1759553090.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Kozhi Kodens Banana Chips 15/2/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1434</li>
+                <li class="thumb-app" id="like-cnt-87">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="poster-flyer-designs" data-id="88" data-title="Master Classic Banner 12/8/2025" data-img="https://regin.in/uploads/products/images/primary/master-classic-banner-1282025_1758716295.png" data-views="935" data-likes="2">
+      <a href="#88" onclick="openLightbox(88); return false;">
+        <img loading="lazy" alt="Master Classic Banner 12/8/2025" title="Master Classic Banner 12/8/2025" src="https://regin.in/uploads/products/images/primary/master-classic-banner-1282025_1758716295.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Master Classic Banner 12/8/2025</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">935</li>
+                <li class="thumb-app" id="like-cnt-88">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="packaging-designs" data-id="89" data-title="Milano Pasta 28/3/2024" data-img="https://regin.in/uploads/products/images/primary/milano-pasta-2832024_1758716139.png" data-views="892" data-likes="0">
+      <a href="#89" onclick="openLightbox(89); return false;">
+        <img loading="lazy" alt="Milano Pasta 28/3/2024" title="Milano Pasta 28/3/2024" src="https://regin.in/uploads/products/images/primary/milano-pasta-2832024_1758716139.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Milano Pasta 28/3/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">892</li>
+                <li class="thumb-app" id="like-cnt-89">0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="logo-designs" data-id="90" data-title="Milano Logo 28/3/2024" data-img="https://regin.in/uploads/products/images/primary/milano-logo-2832024_1758715854.png" data-views="701" data-likes="2">
+      <a href="#90" onclick="openLightbox(90); return false;">
+        <img loading="lazy" alt="Milano Logo 28/3/2024" title="Milano Logo 28/3/2024" src="https://regin.in/uploads/products/images/primary/milano-logo-2832024_1758715854.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Milano Logo 28/3/2024</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">701</li>
+                <li class="thumb-app" id="like-cnt-90">2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="shop-branding-designs" data-id="91" data-title="Udhaya Krishna Ghee Bus Branding 20/09/2023" data-img="https://regin.in/uploads/products/images/primary/udhaya-krishna-ghee-bus-branding-20092023_1707664398.png" data-views="1316" data-likes="3">
+      <a href="#91" onclick="openLightbox(91); return false;">
+        <img loading="lazy" alt="Udhaya Krishna Ghee Bus Branding 20/09/2023" title="Udhaya Krishna Ghee Bus Branding 20/09/2023" src="https://regin.in/uploads/products/images/primary/udhaya-krishna-ghee-bus-branding-20092023_1707664398.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Udhaya Krishna Ghee Bus Branding 20/09/2023</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">1316</li>
+                <li class="thumb-app" id="like-cnt-91">3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="shop-branding-designs" data-id="92" data-title="Hulu Vehicle Branding" data-img="https://regin.in/uploads/products/images/primary/hulu-vehicle-branding_1504425097.png" data-views="6017" data-likes="39">
+      <a href="#92" onclick="openLightbox(92); return false;">
+        <img loading="lazy" alt="Hulu Vehicle Branding" title="Hulu Vehicle Branding" src="https://regin.in/uploads/products/images/primary/hulu-vehicle-branding_1504425097.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Hulu Vehicle Branding</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">6017</li>
+                <li class="thumb-app" id="like-cnt-92">39</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="shop-branding-designs" data-id="93" data-title="SRI SM vehicle branding" data-img="https://regin.in/uploads/products/images/primary/sri-sm-travels-bus-design_1488987426.png" data-views="7704" data-likes="41">
+      <a href="#93" onclick="openLightbox(93); return false;">
+        <img loading="lazy" alt="SRI SM vehicle branding" title="SRI SM vehicle branding" src="https://regin.in/uploads/products/images/primary/sri-sm-travels-bus-design_1488987426.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">SRI SM vehicle branding</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">7704</li>
+                <li class="thumb-app" id="like-cnt-93">41</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="shop-branding-designs" data-id="94" data-title="Nellai Dosa Kadai Branding Design" data-img="https://regin.in/uploads/products/images/primary/NDK-shopbranding-t.png" data-views="3431" data-likes="44">
+      <a href="#94" onclick="openLightbox(94); return false;">
+        <img loading="lazy" alt="Nellai Dosa Kadai Branding Design" title="Nellai Dosa Kadai Branding Design" src="https://regin.in/uploads/products/images/primary/NDK-shopbranding-t.png" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Nellai Dosa Kadai Branding Design</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">3431</li>
+                <li class="thumb-app" id="like-cnt-94">44</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="shop-branding-designs" data-id="95" data-title="Stall Standee" data-img="https://regin.in/uploads/products/images/primary/EM_Poster_20131013123412.jpg" data-views="2491" data-likes="34">
+      <a href="#95" onclick="openLightbox(95); return false;">
+        <img loading="lazy" alt="Stall Standee" title="Stall Standee" src="https://regin.in/uploads/products/images/primary/EM_Poster_20131013123412.jpg" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Stall Standee</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">2491</li>
+                <li class="thumb-app" id="like-cnt-95">34</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="shop-branding-designs" data-id="96" data-title="Food Tree Full Branding Design" data-img="https://regin.in/uploads/products/images/primary/Food_Tree_Interior_20130313160406.jpg" data-views="3605" data-likes="45">
+      <a href="#96" onclick="openLightbox(96); return false;">
+        <img loading="lazy" alt="Food Tree Full Branding Design" title="Food Tree Full Branding Design" src="https://regin.in/uploads/products/images/primary/Food_Tree_Interior_20130313160406.jpg" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Food Tree Full Branding Design</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">3605</li>
+                <li class="thumb-app" id="like-cnt-96">45</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="shop-branding-designs" data-id="97" data-title="Wall Art" data-img="https://regin.in/uploads/products/images/primary/Be_Brainy_Interior_20130313155549.jpg" data-views="3408" data-likes="36">
+      <a href="#97" onclick="openLightbox(97); return false;">
+        <img loading="lazy" alt="Wall Art" title="Wall Art" src="https://regin.in/uploads/products/images/primary/Be_Brainy_Interior_20130313155549.jpg" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Wall Art</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">3408</li>
+                <li class="thumb-app" id="like-cnt-97">36</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="shop-branding-designs" data-id="98" data-title="Bistro Interior 26/11/2012" data-img="https://regin.in/uploads/products/images/primary/Bistro_Interior_20120505013841.jpg" data-views="2160" data-likes="38">
+      <a href="#98" onclick="openLightbox(98); return false;">
+        <img loading="lazy" alt="Bistro Interior 26/11/2012" title="Bistro Interior 26/11/2012" src="https://regin.in/uploads/products/images/primary/Bistro_Interior_20120505013841.jpg" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Bistro Interior 26/11/2012</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">2160</li>
+                <li class="thumb-app" id="like-cnt-98">38</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="items" data-category="shop-branding-designs" data-id="99" data-title="Event Stall" data-img="https://regin.in/uploads/products/images/primary/Max Pro_Kiosk.jpg" data-views="2327" data-likes="32">
+      <a href="#99" onclick="openLightbox(99); return false;">
+        <img loading="lazy" alt="Event Stall" title="Event Stall" src="https://regin.in/uploads/products/images/primary/Max Pro_Kiosk.jpg" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80'" />
+        <div class="hover">
+          <div class="row">
+            <div class="col title-txt">Event Stall</div>
+            <div class="col-auto stats-col">
+              <ul>
+                <li class="thumb-views">2327</li>
+                <li class="thumb-app" id="like-cnt-99">32</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+      </div>
+    </main>
+
+    <!-- Fullscreen Lightbox Modal (#lightbox-modal) -->
+    <div id="lightbox-modal">
+      <div class="lightbox-header">
+        <div class="lightbox-title" id="lb-title">Design Title</div>
+        <div class="lightbox-actions">
+          <span id="lb-views" style="font-size: 13px; color: #aaa;">👁 0 views</span>
+          <button onclick="toggleModalLike()" id="lb-like-btn" style="background: #333; color: #fff; border:none; padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 12px;">❤️ Like</button>
+          <a id="lb-whatsapp-btn" href="#" target="_blank" style="background: #10b981; color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700;">Inquire on WhatsApp</a>
+          <button onclick="closeLightbox()" style="background: none; border: none; color: #fff; font-size: 22px; cursor: pointer;">✕</button>
+        </div>
+      </div>
+
+      <div class="lightbox-body">
+        <img id="lb-img" src="" alt="" />
+        <div class="page-arrows" id="page-prev-arrow" onclick="navigateLightbox(-1)">‹</div>
+        <div class="page-arrows" id="page-next-arrow" onclick="navigateLightbox(1)">›</div>
+      </div>
+
+      <div class="lightbox-footer">
+        Agency: <strong style="color: #fe4101;">Addimprez</strong> &bull; 286, Diwan Bahadur Rd, next to Kalpana Studios, R.S. Puram, Coimbatore, Tamil Nadu 641001 &bull; Mobile: 9566664663
+      </div>
+    </div>
+
+    <!-- Footer (#footer) -->
+    <footer id="footer">
+      <ul class="socials">
+        <li><a href="https://www.facebook.com" target="_blank">f</a></li>
+        <li><a href="https://www.behance.net" target="_blank">Bē</a></li>
+        <li><a href="https://wa.me/919566664663" target="_blank">💬</a></li>
+        <li><a href="https://www.youtube.com" target="_blank">▶</a></li>
+      </ul>
+      <p class="footer-copy">Copyright &copy; 2007 Addimprez Company. All rights reserved.</p>
+      <p class="footer-contact">
+        286, Diwan Bahadur Rd, next to Kalpana Studios, R.S. Puram, Coimbatore, Tamil Nadu 641001 &bull; Mobile: <strong>9566664663</strong>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    // Embedded Interactive Logic
+    let allCards = Array.from(document.querySelectorAll('.items'));
+    let currentFilteredCards = [...allCards];
+    let currentLightboxIndex = -1;
+    let likedItems = {};
+
+    function toggleDropdown(menuId) {
+      const menus = ['follow-menu', 'contact-menu', 'category-menu', 'share-menu'];
+      menus.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          if (id === menuId) {
+            el.classList.toggle('show');
+          } else {
+            el.classList.remove('show');
+          }
+        }
+      });
+    }
+
+    // Close dropdowns on outside click
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('#header')) {
+        ['follow-menu', 'contact-menu', 'category-menu', 'share-menu'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.classList.remove('show');
+        });
+      }
+    });
+
+    function filterCategory(slug, label) {
+      document.getElementById('current-category-label').innerText = label;
+      document.getElementById('category-menu').classList.remove('show');
+
+      currentFilteredCards = allCards.filter(card => {
+        if (slug === 'all') return true;
+        return card.getAttribute('data-category') === slug;
+      });
+
+      allCards.forEach(card => {
+        if (slug === 'all' || card.getAttribute('data-category') === slug) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      document.getElementById('items-count').innerText = currentFilteredCards.length;
+    }
+
+    function searchProducts(query) {
+      const q = query.toLowerCase().trim();
+      let matchCount = 0;
+      currentFilteredCards = [];
+
+      allCards.forEach(card => {
+        const title = (card.getAttribute('data-title') || '').toLowerCase();
+        if (!q || title.includes(q)) {
+          card.style.display = 'block';
+          currentFilteredCards.push(card);
+          matchCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      document.getElementById('items-count').innerText = matchCount;
+    }
+
+    function openLightbox(id) {
+      const idx = currentFilteredCards.findIndex(c => c.getAttribute('data-id') == id);
+      if (idx !== -1) {
+        showLightboxIndex(idx);
+      }
+    }
+
+    function showLightboxIndex(idx) {
+      if (idx < 0) idx = currentFilteredCards.length - 1;
+      if (idx >= currentFilteredCards.length) idx = 0;
+      currentLightboxIndex = idx;
+
+      const card = currentFilteredCards[idx];
+      const title = card.getAttribute('data-title');
+      const img = card.getAttribute('data-img');
+      const views = card.getAttribute('data-views');
+      const id = card.getAttribute('data-id');
+
+      document.getElementById('lb-title').innerText = title;
+      document.getElementById('lb-img').src = img;
+      document.getElementById('lb-views').innerText = '👁 ' + views + ' views';
+      
+      const whatsappText = encodeURIComponent('Hi Addimprez, I am interested in: ' + title);
+      document.getElementById('lb-whatsapp-btn').href = 'https://wa.me/919566664663?text=' + whatsappText;
+
+      updateLikeButton(id);
+      document.getElementById('lightbox-modal').classList.add('active');
+    }
+
+    function navigateLightbox(delta) {
+      showLightboxIndex(currentLightboxIndex + delta);
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.remove('active');
+    }
+
+    function updateLikeButton(id) {
+      const btn = document.getElementById('lb-like-btn');
+      if (likedItems[id]) {
+        btn.style.background = '#e11d48';
+        btn.innerText = '❤️ Liked (' + (parseInt(currentFilteredCards[currentLightboxIndex].getAttribute('data-likes')) + 1) + ')';
+      } else {
+        btn.style.background = '#333';
+        btn.innerText = '❤️ Like (' + currentFilteredCards[currentLightboxIndex].getAttribute('data-likes') + ')';
+      }
+    }
+
+    function toggleModalLike() {
+      if (currentLightboxIndex < 0) return;
+      const card = currentFilteredCards[currentLightboxIndex];
+      const id = card.getAttribute('data-id');
+      likedItems[id] = !likedItems[id];
+      updateLikeButton(id);
+
+      const span = document.getElementById('like-cnt-' + id);
+      if (span) {
+        const base = parseInt(card.getAttribute('data-likes'));
+        span.innerText = likedItems[id] ? base + 1 : base;
+      }
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('lightbox-modal');
+      if (modal && modal.classList.contains('active')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+      }
+    });
+
+    function submitSubscribe(e) {
+      e.preventDefault();
+      document.getElementById('subscribe-form-cnt').style.display = 'none';
+      document.getElementById('subscribe-thankyou').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('follow-menu').classList.remove('show');
+        document.getElementById('subscribe-form-cnt').style.display = 'block';
+        document.getElementById('subscribe-thankyou').style.display = 'none';
+      }, 3000);
+    }
+
+    function submitContact(e) {
+      e.preventDefault();
+      document.getElementById('contact-form-cnt').style.display = 'none';
+      document.getElementById('contact-thankyou').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('contact-menu').classList.remove('show');
+        document.getElementById('contact-form-cnt').style.display = 'block';
+        document.getElementById('contact-thankyou').style.display = 'none';
+      }, 3500);
+    }
+
+    function copyPageLink() {
+      navigator.clipboard.writeText(window.location.href);
+      alert('Page link copied to clipboard!');
+      document.getElementById('share-menu').classList.remove('show');
+    }
+  </script>
+</body>
+</html>
